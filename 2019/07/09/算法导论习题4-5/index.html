@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 格式 | Dream博客</title>
+  <title>算法导论习题4-5 | Dream博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="css,html5,程序员">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Dream博客">
-<meta property="og:url" content="http://yoursite.com/tags/格式/index.html">
+  <meta name="description" content="算法导论习题4-5：芯片检测，自己对于本题的理解，只是用于以后的理解回顾，可能有错仅供参考">
+<meta name="keywords" content="算法导论,学习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法导论习题4-5">
+<meta property="og:url" content="http://yoursite.com/2019/07/09/算法导论习题4-5/index.html">
 <meta property="og:site_name" content="Dream博客">
+<meta property="og:description" content="算法导论习题4-5：芯片检测，自己对于本题的理解，只是用于以后的理解回顾，可能有错仅供参考">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-09T11:15:50.912Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dream博客">
+<meta name="twitter:title" content="算法导论习题4-5">
+<meta name="twitter:description" content="算法导论习题4-5：芯片检测，自己对于本题的理解，只是用于以后的理解回顾，可能有错仅供参考">
   
     <link rel="alternative" href="/atom.xml" title="Dream博客" type="application/atom+xml">
   
@@ -155,64 +159,249 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-算法导论习题4-5" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/08/hexo文章的创建/" class="archive-article-date">
-  	<time datetime="2019-07-08T01:28:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-08</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/08/hexo文章的创建/">hexo文章的创建</a>
+    <h1 class="article-title" itemprop="name">
+      算法导论习题4-5
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/07/09/算法导论习题4-5/" class="archive-article-date">
+  	<time datetime="2019-07-09T11:06:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>算法导论习题4-5：芯片检测，自己对于本题的理解，只是用于以后的理解回顾，可能有错仅供参考</p>
+<a id="more"></a>
+<h1 id="算法导论习题4-5：芯片检测"><a href="#算法导论习题4-5：芯片检测" class="headerlink" title="算法导论习题4-5：芯片检测"></a>算法导论习题4-5：芯片检测</h1><p>思考题4-5</p>
+<p>Diogenes 教授有n个被认为是完全相同的集成电路芯片，原理上它们是可以互相测试的。教授的测试装置一次可测试二片，当该装置中放有两片芯片时，每一片就对另一片作测试并报告其好坏。一个好的芯片总能够正确的报告另一片的好坏，但一个坏的芯片的结果就是不可靠的。这样，每次的测试的四种可能结果如下：</p>
+<table>
+<thead>
+<tr>
+<th>A芯片报告</th>
+<th>B芯片报告</th>
+<th>结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>B是好的</td>
+<td>A是坏的</td>
+<td>都是好的，或都是坏的</td>
+</tr>
+<tr>
+<td>B是好的</td>
+<td>A是坏的</td>
+<td>至少有一片是坏的</td>
+</tr>
+<tr>
+<td>B是坏的</td>
+<td>A是好的</td>
+<td>至少有一片是坏的</td>
+</tr>
+<tr>
+<td>B是坏的</td>
+<td>A是坏的</td>
+<td>至少有一片是坏的</td>
+</tr>
+</tbody></table>
+<p>1.证明若不少于 n/2 的芯片是坏的，在这种成对测试方式下，使用任何策略都不能确定哪个芯片是好的。假定坏芯片可以合谋欺骗教授。<br>2.假设有多于 n/2 的芯片是好的，考虑从 n 片中找出一片好芯片的问题.证明：进行n/2 次逐对检查就足以使问题的规模降至近原来的一半。<br>3.假设有多于 n/2 的芯片是好的，证明好的芯片可用 O(n) 对测试找出。</p>
+<h2 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h2><p>假如将n片芯片分为：</p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>数量</th>
+<th>好坏</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td>n-2*m</td>
+<td>坏的</td>
+</tr>
+<tr>
+<td>B</td>
+<td>m</td>
+<td>坏的</td>
+</tr>
+<tr>
+<td>C</td>
+<td>m</td>
+<td>好的</td>
+</tr>
+</tbody></table>
+<p>那么三者相比可能出现的结果为：</p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A与B</td>
+<td>好好/好坏/坏坏</td>
+</tr>
+<tr>
+<td>A与C</td>
+<td>好坏/坏坏</td>
+</tr>
+<tr>
+<td>B与C</td>
+<td>好坏/好坏</td>
+</tr>
+</tbody></table>
+<p>只有当A与B都表现出<font color="red">好好</font>情况下，可以根据重复检测A与B来判断出A与B两者都是坏的，从而只要重复检测C与其他两个坏的编号比较可以得出结果，但是如果A与B检测一直不出现<font color="red">好好</font>情况的话，就<font color="red">无法检测</font>出三个编号里面哪个是好，哪个是坏。根据题意<font color="blue">坏芯片可以合谋</font>，若两个坏芯片在一起不表现出<font color="red">好好</font>情况，那么就无法得出结果。</p>
+<h2 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h2><p>由第一题可知：</p>
+<p>无论表现是<font color="red">好坏，坏坏</font>除了能够证明出里面至少存在一个坏的芯片外，并没有什么太大的作用。但是如果表现中存在<font color="red">好好</font>,可以经过重复检测判断出两个芯片的好坏结果。</p>
+<p>解题思路：</p>
+<p>将n片芯片分成两组：A与B，分别从A与B中各选出一片芯片，进行比较一次比较，将出现<font color="red">好好</font>结果的芯片保存，直到出现两次<font color="red">好好</font>结果的芯片，将这两次结果所得的四片芯片a1，a2，b1，b2，将a1与a2比较，b1与b2比较，可以得出四篇芯片的好坏结果。如果发现都为坏，则继续查找。时间复杂度最大为c*n/2+O(1)，最小为O(1)</p>
+<h2 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h2><p>解题思路：</p>
+<p>利用第二问的方法找到一个好芯片，然后利用好芯片去与其他的n-1片芯片进行比较得出结果。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法导论</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">格式</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习笔记</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/09/算法导论习题4-5/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/07/08/hexo文章的创建/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hexo文章的创建</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#算法导论习题4-5：芯片检测"><span class="toc-number">1.</span> <span class="toc-text">算法导论习题4-5：芯片检测</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一题"><span class="toc-number">1.1.</span> <span class="toc-text">第一题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二题"><span class="toc-number">1.2.</span> <span class="toc-text">第二题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第三题"><span class="toc-number">1.3.</span> <span class="toc-text">第三题</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -235,9 +424,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

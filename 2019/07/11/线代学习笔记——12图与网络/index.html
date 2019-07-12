@@ -19,7 +19,7 @@
 <meta property="og:image" content="http://a1.qpic.cn/psb?/V12FMHeb0B5sXO/BzszWU.KaM.83csxSPoH5R29p2jQnwMZp.SkfnS*w7g!/b/dLgAAAAAAAAA&ek=1&kp=1&pt=0&bo=RwHKAAAAAAADF74!&tl=1&vuin=2335180120&tm=1562814000&sce=60-2-2&rf=viewer_4">
 <meta property="og:image" content="http://a1.qpic.cn/psb?/V12FMHeb0B5sXO/BzszWU.KaM.83csxSPoH5R29p2jQnwMZp.SkfnS*w7g!/b/dLgAAAAAAAAA&ek=1&kp=1&pt=0&bo=RwHKAAAAAAADF74!&tl=1&vuin=2335180120&tm=1562814000&sce=60-2-2&rf=viewer_4">
 <meta property="og:image" content="http://a3.qpic.cn/psb?/V12FMHeb3Bo7rr/Vj6d4yU9jrPHYId1E5jhDu5xLZkL20JnU9Fp7Rl70pg!/b/dLYAAAAAAAAA&ek=1&kp=1&pt=0&bo=JAG5AAAAAAADF64!&tl=1&vuin=2335180120&tm=1562814000&sce=60-2-2&rf=viewer_4">
-<meta property="og:updated_time" content="2019-07-11T03:43:48.007Z">
+<meta property="og:updated_time" content="2019-07-12T03:54:36.371Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线代学习笔记——12图与网络">
 <meta name="twitter:description" content="线代学习笔记——12.图和网络非常感谢Dr.Strang的线代教学，很惭愧自己英语成绩不好，只能在bilibili去观看他的视频。">
@@ -200,7 +200,7 @@ A=
  \end{matrix}
  \right]</script><p>其中列代表节点，行代表边。</p>
 <p>由图发现：边(edges)1、2、3三者刚好构成一组回路(loop)，而在矩阵里面表示出1、2、3行<font color="red">相关</font> 。若将每个图用矩阵表示会发现矩阵里面存在的许多的0，所以用矩阵表示图会比较<font color="red">稀疏</font> 。</p>
-<p>由于矩阵里面向量存在<font color="red">相关性 </font>，可以去考虑矩阵零空间的情况:Ax=0</p>
+<p>由于矩阵里面向量存在<font color="red">相关性 </font>，可以去考虑矩阵零空间的情况:AX=0</p>
 <script type="math/tex; mode=display">
 \left[
 \begin{matrix}
@@ -258,8 +258,8 @@ X=C
  1\\
  1
  \end{matrix}
- \right]</script><p>可以得出，A矩阵零空间为一维，矩阵的秩(rank)为3 。各点间电势差相等，用公式表示就是：e=Ax</p>
-<p>再来考虑一下转置A的零空间，也就是A<sup>T</sup>y=0</p>
+ \right]</script><p>可以得出，A矩阵零空间为一维，矩阵的秩(rank)为3 。各点间电势差相等，用公式表示就是：e=AX</p>
+<p>再来考虑一下转置A的零空间，也就是A<sup>T</sup>Y=0</p>
 <script type="math/tex; mode=display">
 \left[
 \begin{matrix}
@@ -295,13 +295,13 @@ X=C
  y_1-y_2=0\\
  y_2+y_3-y_5=0\\
  y_4+y_5=0
-\end{cases}</script><p>更具A矩阵的秩为3可得出，此矩阵零空间的秩为2，于是存在两个自由变量。</p>
+\end{cases}</script><p>根据A矩阵的秩为3可得出，此矩阵零空间的秩为2，于是存在两个自由变量。</p>
 <p>若将Y={y<sub>1</sub>,y<sub>2</sub>,y<sub>3</sub>,y<sub>4</sub>,y<sub>5</sub>}表示为各边的电流，按照图片与所得公式</p>
 <p><img src="http://a1.qpic.cn/psb?/V12FMHeb0B5sXO/BzszWU.KaM.83csxSPoH5R29p2jQnwMZp.SkfnS*w7g!/b/dLgAAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=RwHKAAAAAAADF74!&amp;tl=1&amp;vuin=2335180120&amp;tm=1562814000&amp;sce=60-2-2&amp;rf=viewer_4" alt="1562811600281"></p>
 <p>发现，刚好满足<a href="https://baike.baidu.com/item/基尔霍夫电流定律/6085527?fr=aladdin" target="_blank" rel="noopener">基尔霍夫电流定律</a>即电流平衡方程。</p>
-<p>若根据<font color="red">U=IR</font>既各节点间的电压等于节点间的电阻乘上各点间的电流，将各点间的电压看作一常量矩阵C，电压与电流存在倍数关系，于是用公式表示就是：y=C*e</p>
-<p>再根据A<sup>T</sup>y=0得出电流的平衡方程，由于取得的为A<sup>T</sup>y=0的情况，就是无外部电源影响的情况，电路中的总电流为0，加入外部电源流则为：A<sup>T</sup>y=f</p>
-<p>结合上面的公式：e=Ax、y=Ce、A<sup>T</sup>y=f，三者联合可得：<font color="red">A<sup>T</sup>CAx=f</font></p>
+<p>若根据<font color="red">U=IR</font>既各节点间的电压等于节点间的电阻乘上各点间的电流，将各点间的电阻看作一<font color="red">常量</font>，电压与电流存在倍数关系，于是用公式表示就是：Y=Ce</p>
+<p>再根据A<sup>T</sup>Y=0得出电流的平衡方程，由于取得的为A<sup>T</sup>Y=0的情况，就是无外部电源影响的情况，电路中的总电流为0，加入外部电源流则为：A<sup>T</sup>Y=f</p>
+<p>结合上面的公式：e=AX、Y=Ce、A<sup>T</sup>Y=f，三者联合可得：<font color="red">A<sup>T</sup>CAx=f</font></p>
 <p>根据第一组小循环：线1、2、3组成的循环，假设<font color="blue">节点上不会积累电流</font>且1节点流给2节点的电流为1，即y<sub>1</sub>=1,则y<sub>2</sub>=1，由于第一个1，2，3组成的循环y<sub>4</sub>为节点1流向节点2的电流，与节点2流向节点1的方向相反，于是y<sub>3</sub>=-1，得出结果Z<sub>1</sub>。</p>
 <p>若根据第二组小循环：线3、4、5组成的循环，得出另一个结果Z<sub>2</sub>。</p>
 <script type="math/tex; mode=display">
@@ -612,6 +612,14 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">线代</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
@@ -625,14 +633,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">学习笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">线代</a>
               </li>
             
             <div class="clearfix"></div>

@@ -6,16 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: hexo | Dream博客</title>
+  <title>Oracle数据库学习(一) | Dream博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="css,html5,程序员">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Dream博客">
-<meta property="og:url" content="http://yoursite.com/tags/hexo/index.html">
+  <meta name="description" content="本篇文章只作为自身学习Oracle数据库时的笔记，用于之后的复习。若想详细学习数据库，可以关注此up主DT课堂原名颜群，本博主也是看着它的视频学习，勿扰。">
+<meta name="keywords" content="Oracle,笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Oracle数据库学习(一)">
+<meta property="og:url" content="http://yoursite.com/2020/01/15/Oracle数据库学习-一/index.html">
 <meta property="og:site_name" content="Dream博客">
+<meta property="og:description" content="本篇文章只作为自身学习Oracle数据库时的笔记，用于之后的复习。若想详细学习数据库，可以关注此up主DT课堂原名颜群，本博主也是看着它的视频学习，勿扰。">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7KI7Ne71dU.cQzjmoIIuDCFgwPTWf18dugbMlnfqlX2DAy9wyhNK3CdulUfboLR24wfhbw.vF21CYlaaQPqa7fM!/b&bo=RAO0AUQDtAEDGTw!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7LPuzL*Mrmj55UiknbhunnFphohoooH6nu2IEVn9ctgiUXiYdO9jILhksdtIk3jNRmxhfWAEYvkXDp.eg*sogro!/b&bo=*gObAQAAAAADF1U!&rf=viewer_4">
+<meta property="og:updated_time" content="2020-01-15T13:12:05.619Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dream博客">
+<meta name="twitter:title" content="Oracle数据库学习(一)">
+<meta name="twitter:description" content="本篇文章只作为自身学习Oracle数据库时的笔记，用于之后的复习。若想详细学习数据库，可以关注此up主DT课堂原名颜群，本博主也是看着它的视频学习，勿扰。">
+<meta name="twitter:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7KI7Ne71dU.cQzjmoIIuDCFgwPTWf18dugbMlnfqlX2DAy9wyhNK3CdulUfboLR24wfhbw.vF21CYlaaQPqa7fM!/b&bo=RAO0AUQDtAEDGTw!&rf=viewer_4">
   
     <link rel="alternative" href="/atom.xml" title="Dream博客" type="application/atom+xml">
   
@@ -155,106 +162,260 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Oracle数据库学习-一" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/13/hexo博客搭建/" class="archive-article-date">
-  	<time datetime="2019-07-13T04:53:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-13</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/13/hexo博客搭建/">hexo博客搭建</a>
+    <h1 class="article-title" itemprop="name">
+      Oracle数据库学习(一)
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/01/15/Oracle数据库学习-一/" class="archive-article-date">
+  	<time datetime="2020-01-15T11:21:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本篇文章只作为自身学习Oracle数据库时的笔记，用于之后的复习。<br>若想详细学习数据库，可以关注此up主<a href="https://space.bilibili.com/326782142/" target="_blank" rel="noopener">DT课堂原名颜群</a>，本博主也是看着它的视频学习，勿扰。<br><a id="more"></a></p>
+<h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><blockquote>
+<p>此为学习数据库的一些基础的概念性东西，即使不看也不会对之后的学习有任何的影响。</p>
+</blockquote>
+<hr>
+<h2 id="数据库基础概念"><a href="#数据库基础概念" class="headerlink" title="数据库基础概念"></a>数据库基础概念</h2><p>以前存储数据的方法大致分为两种，一种就是<font color="blue">文件</font>，另一种就是<font color="blue">内存</font>，这也就对应着电脑上面的<font color="green">硬盘</font>与<font color="green">内存</font>，同理也存在它们两个的特性，<font color="green">内存</font>数据<font color="blue">传输速度快</font>，但是只是<font color="blue">临时存储</font>，重启后数据就丢失，<font color="green">硬盘</font>里面存储的数据虽然是<font color="blue">永久存储</font>的，但是<font color="blue">解析起来比较麻烦</font>，数据传输方面也就没有内存快。</p>
+<p><del>当然这么讲肯定是不好理解的</del></p>
+<blockquote>
+<p>内存存储与硬盘存储就如同你qq与人聊天一样，在你还没有把信息发给别人之前，输入在输入框里面的文字信息就是内存存储的，在你电脑重启后信息就会丢失，而已经发出去的信息就是硬盘存储，无论你的电脑开关机多少次，你都可以通过消息记录去找到之前发送的信息。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>而内存因为与CPU最靠近，之间的信息传输都是瞬间完成的，而硬盘要想把数据传输给CPU还得经过内存才能传过去，所以速度之间是存在差距的。</p>
+</blockquote>
+<p>而<font color="red">数据库</font>本质上也只是一个<font color="red">存放数据的仓库</font>，但是却能<font color="red">永久存放数据</font>，而且<font color="red">解析还很方便</font>。</p>
+<h2 id="现如今主流数据库"><a href="#现如今主流数据库" class="headerlink" title="现如今主流数据库"></a>现如今主流数据库</h2><p>如今主要分为两种类型：<font color="blue">关系型数据库</font>与<font color="green">非关系性数据库</font>。</p>
+<ol>
+<li>关系型数据库</li>
+</ol>
+<blockquote>
+<p>关系型就相当于<font color="blue">二维表</font>，主要根据行列查找信息</p>
+</blockquote>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>数据库</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><font color="red">oracle</font></td>
+<td>产品可以免费使用，但是出现bug或者需要维护时就得收费，有强大的稳定性与安全性</td>
+</tr>
+<tr>
+<td><font color="blue">mysql</font></td>
+<td>与oracle一样，但是是社区版Community免费，而企业版收费</td>
+</tr>
+<tr>
+<td><font color="blue">sql server</font></td>
+<td>微软公司开发的，有强大的图形化工具，方便使用</td>
+</tr>
+<tr>
+<td><font color="blue">db2</font></td>
+<td>IBM公司开发的，主要在多个操作系统，多个硬件的条件下使用</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>oracle如今的版本：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>版本</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><font color="blue">oracle8i/9i</font></td>
+<td>i代表的就是internet，数据库开始走向网络</td>
+</tr>
+<tr>
+<td><font color="red">oracle10g/11g</font></td>
+<td>g代表gride，也就是<font color="blue">网格计算</font></td>
+</tr>
+<tr>
+<td><font color="blue">oracle12c</font></td>
+<td>c代表cloud，云计算</td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>网格计算类似将数据之间利用网格分块，划分出各自的区域，用间隔代替数据之间的距离，可以避免查找数据时舍近求远的问题，提高访问速度。</p>
+</blockquote>
+<p><font color="red">注意</font>：oracle各版本对于 <strong>学习</strong> 与 <strong>研发</strong> 没有任何区别，只是在 <strong>部署</strong> 与 <strong>运维</strong> 时差异较大。</p>
+<ol>
+<li>非关系性数据库：</li>
+</ol>
+<p>NoSQL(no only sql)、redis/mongodb(基于key-value结构)</p>
+<hr>
+<h1 id="数据库服务器"><a href="#数据库服务器" class="headerlink" title="数据库服务器"></a>数据库服务器</h1><blockquote>
+<p>数据库服务器：将数据库部署在服务器上面<br>客户端发出CRUD（增删改查）给服务器，服务器进行处理后对客户端发出响应</p>
+</blockquote>
+<hr>
+<h2 id="组成结构"><a href="#组成结构" class="headerlink" title="组成结构"></a>组成结构</h2><p>硬盘里面有数据库，内存里面存在数据库的实例<br>而客户端就是访问内存里面数据库的实例</p>
+<p><font color="red">注意</font>：可以多个客户端访问一个数据库实例</p>
+<p><img src="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7KI7Ne71dU.cQzjmoIIuDCFgwPTWf18dugbMlnfqlX2DAy9wyhNK3CdulUfboLR24wfhbw.vF21CYlaaQPqa7fM!/b&amp;bo=RAO0AUQDtAEDGTw!&amp;rf=viewer_4" alt="P"></p>
+<p>而数据库实例：</p>
+<p><img src="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7LPuzL*Mrmj55UiknbhunnFphohoooH6nu2IEVn9ctgiUXiYdO9jILhksdtIk3jNRmxhfWAEYvkXDp.eg*sogro!/b&amp;bo=*gObAQAAAAADF1U!&amp;rf=viewer_4" alt="A"></p>
+<p><font color="red">注意</font>：一个PGA只能对应一个客户端。<br>而信息传输分两步：<br>                信息从客户端传入进PGA，PGA再把信息传入给SGA，在客户端未请求数据输出之前，SGA会把客户端之前的所有请求里面将重复/冗余的命令进行合并，简化再发送给硬盘里面的数据库</p>
+<p><font color="blue">好处</font>：减少了硬盘与内存之间的信息传输，提高了速度</p>
+<h1 id="参考材料"><a href="#参考材料" class="headerlink" title="参考材料"></a>参考材料</h1><ul>
+<li><a href="https://www.bilibili.com/video/av53956941" target="_blank" rel="noopener">oracle基础概念</a></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Oracle</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">博客搭建</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/01/15/Oracle数据库学习-一/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/08/hexo文章的创建/" class="archive-article-date">
-  	<time datetime="2019-07-08T01:28:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-08</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/07/13/hexo博客搭建/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hexo博客搭建</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/08/hexo文章的创建/">hexo文章的创建</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">格式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#数据库"><span class="toc-number">1.</span> <span class="toc-text">数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#数据库基础概念"><span class="toc-number">1.1.</span> <span class="toc-text">数据库基础概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#现如今主流数据库"><span class="toc-number">1.2.</span> <span class="toc-text">现如今主流数据库</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据库服务器"><span class="toc-number">2.</span> <span class="toc-text">数据库服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#组成结构"><span class="toc-number">2.1.</span> <span class="toc-text">组成结构</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考材料"><span class="toc-number">3.</span> <span class="toc-text">参考材料</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -277,9 +438,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

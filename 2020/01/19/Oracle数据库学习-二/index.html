@@ -8,13 +8,13 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Oracle数据库学习(二) | Dream博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Oracle基础命令的讲解，主要围绕oracle数据库基本查看方式，查找操作。 注：oracle数据库的下载与设置不做任何讲解，防止设置错误推荐视频[oracle下载安装并设置](https://www.bilibili.com/video/av53956941?p=2)">
+  <meta name="description" content="Oracle基础命令的讲解，主要围绕oracle数据库基本查看方式，查找操作。oracle数据库的下载与设置不做任何讲解，若防止设置错误、推荐视频：oracle安装与设置。">
 <meta name="keywords" content="Oracle学习笔记,笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Oracle数据库学习(二)">
 <meta property="og:url" content="http://yoursite.com/2020/01/19/Oracle数据库学习-二/index.html">
 <meta property="og:site_name" content="Dream博客">
-<meta property="og:description" content="Oracle基础命令的讲解，主要围绕oracle数据库基本查看方式，查找操作。 注：oracle数据库的下载与设置不做任何讲解，防止设置错误推荐视频[oracle下载安装并设置](https://www.bilibili.com/video/av53956941?p=2)">
+<meta property="og:description" content="Oracle基础命令的讲解，主要围绕oracle数据库基本查看方式，查找操作。oracle数据库的下载与设置不做任何讲解，若防止设置错误、推荐视频：oracle安装与设置。">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7Av6tBXZZM9jhM07VUOGP*JssiuOuL3FaAgOClMEY4pad9LI5eZq16pGdwKFYwINhHnLc5oI4GS04l3Sg6VOmns!/b&bo=lQUDAZUFAwEDGTw!&rf=viewer_4">
 <meta property="og:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7IihgQPm*ItyKz1sqRNk1*WWgIYf7zNkzRVqXlIgdMzZoKRqWiF*UkUv1ZHe1eJLzjJJQxWcCSL0.DZjcAzJ3kU!/b&bo=xAKBAcQCgQEDGTw!&rf=viewer_4">
@@ -24,10 +24,10 @@
 <meta property="og:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7I.W446EFBZkT8uCyNCdC.4IOjIGpqmbMQqBJ05Sz0duekP6FkReG8ejubwSsg6bVqsGKNwoOYZe.0xzmuuPf4w!/b&bo=GwO.ARsDvgEDGTw!&rf=viewer_4">
 <meta property="og:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7E2uxldMBni.v40PnGH3VSwy6f2bUbe99qmohCjCR99hCW6CJbrreRNoE0Hp8b.LUEhiUaRqo.w0ToaXc6WWI5U!/b&bo=DwLwAA8C8AADGTw!&rf=viewer_4">
 <meta property="og:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7D7sX9hdIoxn1FKsHEyIWL4qWa.zcAfKCYrO0UkOoMubI3dlTfRyyYsCPvuy5OlHuAEVIYXy7p1sr9GD.CfxMwI!/b&bo=1QJLAdUCSwEDGTw!&rf=viewer_4">
-<meta property="og:updated_time" content="2020-01-19T15:26:14.871Z">
+<meta property="og:updated_time" content="2020-01-19T15:33:35.425Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Oracle数据库学习(二)">
-<meta name="twitter:description" content="Oracle基础命令的讲解，主要围绕oracle数据库基本查看方式，查找操作。 注：oracle数据库的下载与设置不做任何讲解，防止设置错误推荐视频[oracle下载安装并设置](https://www.bilibili.com/video/av53956941?p=2)">
+<meta name="twitter:description" content="Oracle基础命令的讲解，主要围绕oracle数据库基本查看方式，查找操作。oracle数据库的下载与设置不做任何讲解，若防止设置错误、推荐视频：oracle安装与设置。">
 <meta name="twitter:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7Av6tBXZZM9jhM07VUOGP*JssiuOuL3FaAgOClMEY4pad9LI5eZq16pGdwKFYwINhHnLc5oI4GS04l3Sg6VOmns!/b&bo=lQUDAZUFAwEDGTw!&rf=viewer_4">
   
     <link rel="alternative" href="/atom.xml" title="Dream博客" type="application/atom+xml">
@@ -188,20 +188,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Oracle基础命令的讲解，主要围绕oracle数据库基本查看方式，查找操作。</p>
-<font color="red">注</font>：oracle数据库的下载与设置不做任何讲解，防止设置错误推荐视频[oracle下载安装并设置](https://www.bilibili.com/video/av53956941?p=2)
+        <p>Oracle基础命令的讲解，主要围绕oracle数据库基本查看方式，查找操作。<br>oracle数据库的下载与设置不做任何讲解，若防止设置错误、推荐视频：<a href="https://www.bilibili.com/video/av53956941?p=2" target="_blank" rel="noopener">oracle安装与设置</a>。</p>
 <a id="more"></a>
-
----
-
-#  oracle命令
-
-## 用户登陆
-
-> 命令输入全部在cmd内进行
-
-首先要想操作数据库就得<font color="red">连接数据库</font>，输入命令：`sqlplus 用户名/密码`。
-
+<hr>
+<h1 id="oracle命令"><a href="#oracle命令" class="headerlink" title="oracle命令"></a>oracle命令</h1><h2 id="用户登陆"><a href="#用户登陆" class="headerlink" title="用户登陆"></a>用户登陆</h2><blockquote>
+<p>命令输入全部在cmd内进行</p>
+</blockquote>
+<p>首先要想操作数据库就得<font color="red">连接数据库</font>，输入命令：<code>sqlplus 用户名/密码</code>。</p>
 <font color="red">注</font>：数据库的用户有三种，超级管理员，普通管理员，普通用户。这里只使用普通用户。
 
 ![](http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7JdZX6PjfMhmKCLox.8GWWiSyzg5ctm6Aj3paXpHs*QRMGd4qN8pqbX1hTaUbyw5E3IW5DQIBh.h0eyu4*nIF.w!/b&bo=QANSAUADUgEDGTw!&rf=viewer_4)
@@ -645,7 +638,7 @@ oracle数据库在下载好之后里面是已经存在一些已有的表格和�
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本概念"><span class="toc-number">1.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#属性格式"><span class="toc-number">2.</span> <span class="toc-text">属性格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#语句改错"><span class="toc-number">3.</span> <span class="toc-text">语句改错</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL控制行列数据"><span class="toc-number">4.</span> <span class="toc-text">SQL控制行列数据</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#oracle命令"><span class="toc-number">1.</span> <span class="toc-text">oracle命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#用户登陆"><span class="toc-number">1.1.</span> <span class="toc-text">用户登陆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本概念"><span class="toc-number">1.2.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#属性格式"><span class="toc-number">1.3.</span> <span class="toc-text">属性格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#语句改错"><span class="toc-number">1.4.</span> <span class="toc-text">语句改错</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL控制行列数据"><span class="toc-number">1.5.</span> <span class="toc-text">SQL控制行列数据</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -778,6 +771,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">格式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">算法导论</a>
               </li>
              
@@ -791,14 +792,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">线代</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">格式</a>
               </li>
              
               <li class="article-tag-list-item">

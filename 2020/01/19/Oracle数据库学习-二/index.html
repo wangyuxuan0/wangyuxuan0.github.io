@@ -6,16 +6,29 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Dream博客</title>
+  <title>Oracle数据库学习(二) | Dream博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="css,html5,程序员">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Dream博客">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="Oracle基础命令的讲解，主要围绕oracle数据库基本查看方式，查找操作。 注：oracle数据库的下载与设置不做任何讲解，防止设置错误推荐视频[oracle下载安装并设置](https://www.bilibili.com/video/av53956941?p=2)">
+<meta name="keywords" content="Oracle学习笔记,笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Oracle数据库学习(二)">
+<meta property="og:url" content="http://yoursite.com/2020/01/19/Oracle数据库学习-二/index.html">
 <meta property="og:site_name" content="Dream博客">
+<meta property="og:description" content="Oracle基础命令的讲解，主要围绕oracle数据库基本查看方式，查找操作。 注：oracle数据库的下载与设置不做任何讲解，防止设置错误推荐视频[oracle下载安装并设置](https://www.bilibili.com/video/av53956941?p=2)">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7Av6tBXZZM9jhM07VUOGP*JssiuOuL3FaAgOClMEY4pad9LI5eZq16pGdwKFYwINhHnLc5oI4GS04l3Sg6VOmns!/b&bo=lQUDAZUFAwEDGTw!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7IihgQPm*ItyKz1sqRNk1*WWgIYf7zNkzRVqXlIgdMzZoKRqWiF*UkUv1ZHe1eJLzjJJQxWcCSL0.DZjcAzJ3kU!/b&bo=xAKBAcQCgQEDGTw!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7CMKtxStV*CH5z5nDYUVXjv2nshDVA4xVTUZGb8tphRGs.mLL2J2g8F*JGQfIABQ0Ych7fGRuzgQX0USBDAER.M!/b&bo=oQLPAKECzwADGTw!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7CmI4ezcmKyfd.kf49TNoD7s7ttQOHMN4nTzqjEgtQ6PlTfd67S9Ok3bQiLFg2GqGS*xoWE*ksRo1LwUW*H4yNA!/b&bo=swLTAbMC0wEDGTw!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7B0liiZODTq7iH7*JZ8CkNZj02tIt0NOoVnW1vanpgNlT.r35ckxCcUkoGOr15A*8FiWguVfpsu2TWOww8KNdBM!/b&bo=8AIDAfACAwEDGTw!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7I.W446EFBZkT8uCyNCdC.4IOjIGpqmbMQqBJ05Sz0duekP6FkReG8ejubwSsg6bVqsGKNwoOYZe.0xzmuuPf4w!/b&bo=GwO.ARsDvgEDGTw!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7E2uxldMBni.v40PnGH3VSwy6f2bUbe99qmohCjCR99hCW6CJbrreRNoE0Hp8b.LUEhiUaRqo.w0ToaXc6WWI5U!/b&bo=DwLwAA8C8AADGTw!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7D7sX9hdIoxn1FKsHEyIWL4qWa.zcAfKCYrO0UkOoMubI3dlTfRyyYsCPvuy5OlHuAEVIYXy7p1sr9GD.CfxMwI!/b&bo=1QJLAdUCSwEDGTw!&rf=viewer_4">
+<meta property="og:updated_time" content="2020-01-19T15:22:12.300Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dream博客">
+<meta name="twitter:title" content="Oracle数据库学习(二)">
+<meta name="twitter:description" content="Oracle基础命令的讲解，主要围绕oracle数据库基本查看方式，查找操作。 注：oracle数据库的下载与设置不做任何讲解，防止设置错误推荐视频[oracle下载安装并设置](https://www.bilibili.com/video/av53956941?p=2)">
+<meta name="twitter:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7Av6tBXZZM9jhM07VUOGP*JssiuOuL3FaAgOClMEY4pad9LI5eZq16pGdwKFYwINhHnLc5oI4GS04l3Sg6VOmns!/b&bo=lQUDAZUFAwEDGTw!&rf=viewer_4">
   
     <link rel="alternative" href="/atom.xml" title="Dream博客" type="application/atom+xml">
   
@@ -155,36 +168,375 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Oracle数据库学习-二" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Oracle数据库学习(二)
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/19/Oracle数据库学习-二/" class="archive-article-date">
+
+        
+        <a href="/2020/01/19/Oracle数据库学习-二/" class="archive-article-date">
   	<time datetime="2020-01-19T03:21:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-19</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/19/Oracle数据库学习-二/">Oracle数据库学习(二)</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Oracle基础命令的讲解，主要围绕oracle数据库基本查看方式，查找操作。</p>
+<font color="red">注</font>：oracle数据库的下载与设置不做任何讲解，防止设置错误推荐视频[oracle下载安装并设置](https://www.bilibili.com/video/av53956941?p=2)
+<a id="more"></a>
 
-        <div class="article-info info-on-right">
-          
+---
+
+#  oracle命令
+
+## 用户登陆
+
+> 命令输入全部在cmd内进行
+
+首先要想操作数据库就得<font color="red">连接数据库</font>，输入命令：`sqlplus 用户名/密码`。
+
+<font color="red">注</font>：数据库的用户有三种，超级管理员，普通管理员，普通用户。这里只使用普通用户。
+
+![A](http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7JdZX6PjfMhmKCLox.8GWWiSyzg5ctm6Aj3paXpHs*QRMGd4qN8pqbX1hTaUbyw5E3IW5DQIBh.h0eyu4*nIF.w!/b&bo=QANSAUADUgEDGTw!&rf=viewer_4)
+
+当然，若想<font color="red">查找自己连接的用户名</font>，也可以输入：`show user`查看。
+
+![B](http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7KcjRx03.IxzCbRbGmzBTYWrMXmqKtdgY58K5iWwjfPV4ucUA8WrYCX6Q6*qGynCj9.BINL.tV2uV9Lm1dtBmfE!/b&bo=2wJlANsCZQADGTw!&rf=viewer_4)
+
+> <font color="red">注意</font>：有些资料里面用<font color="blue">方案</font>代替了<font color="blue">用户</font>，<font color="blue">方案</font>也就相当于<font color="blue">用户</font>。
+
+---
+
+## 查找
+
+oracle数据库在下载好之后里面是已经存在一些已有的表格和信息，通过输入：`select *from tab;`可以在数据库内<font color="red">查找已存在的表格</font>。
+
+![C](http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7C4da6bQqWdrdBgNQZAVJDoKsnfh24c9n9AvjXiUZaiZkeD8bbu6qvhD*p6ShZam99T2CMowzNMhiiFLmBG0R8U!/b&bo=NwLAADcCwAADGTw!&rf=viewer_4)
+
+输入：`select *from 表格名;`可以<font color="red">查看表格信息</font>。
+
+![D](http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7NIm8mJwuDJ2oz*ORIUe3xwRrvr1qdmYFBd0uV1WgmEi3NVZQclOppoJCBCW4C3qxm.8VZeQkSrRXFbM7eGnVUE!/b&bo=0gNIA9IDSAMDGTw!&rf=viewer_4)
+
+可以看到bonus表格没有任何信息，dopt表格与emp表格存在一些信息，但是emp表格感觉信息摆放的有些不合理。
+
+因为长度设置有限，使得表格信息部分重叠，可以输入命令：`set line 长度` <font color="red">设置自己想要的表格长度</font>。
+
+![](http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7G.B2LQKQHJDRKkTsRA0BXvczVQWK8kjBR78jiGoAUzZNAwKT2GkUcO7J4BN.sGMnR5eOfRdgWJD1.MDHWBS.Kg!/b&bo=MwToATME6AEDGTw!&rf=viewer_4)
+
+同样输入：`desc 表名`可以<font color="red">查看表格字段</font>
+
+<p><img src="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7Av6tBXZZM9jhM07VUOGP*JssiuOuL3FaAgOClMEY4pad9LI5eZq16pGdwKFYwINhHnLc5oI4GS04l3Sg6VOmns!/b&amp;bo=lQUDAZUFAwEDGTw!&amp;rf=viewer_4" alt></p>
+<hr>
+<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><blockquote>
+<p> 当然啦，表格信息是摆法合理了但是看不懂也没有任何作用，以下就是<font color="red">表格信息的部分解释</font>：</p>
+</blockquote>
+<ol>
+<li><p><strong>实体</strong><br> 相当于java里面的<font color="blue">类</font>，用于指<font color="red">某类事物的集合</font>。</p>
+</li>
+<li><p><strong>记录</strong><br> 相当于java里面的<font color="blue">对象</font>，也对应于表格里面的一<font color="red">行数据</font>。</p>
+</li>
+<li><p><strong>字段</strong><br> 相当于java里面的<font color="blue">属性</font>，也对应于表格里面的一<font color="red">列数据</font>。</p>
+</li>
+<li><p><strong>表</strong><br> 全部<strong>字段</strong> + 全部<strong>记录</strong>组合成的。</p>
+</li>
+</ol>
+<p>EMP(雇员表)：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>NO</th>
+<th>字段</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>EMPNO</td>
+<td>NUMBER(4)</td>
+<td>雇员编号</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ENAME</td>
+<td>VARCHAR2(10)</td>
+<td>雇员姓名</td>
+</tr>
+<tr>
+<td>3</td>
+<td>JOB</td>
+<td>VARCHAR2(9)</td>
+<td>工作职位</td>
+</tr>
+<tr>
+<td>4</td>
+<td>MGR</td>
+<td>NUMBER(4)</td>
+<td>一个雇员的领导编号</td>
+</tr>
+<tr>
+<td>5</td>
+<td>HIREDATE</td>
+<td>DATE</td>
+<td>雇佣日期</td>
+</tr>
+<tr>
+<td>6</td>
+<td>SAL</td>
+<td>NUMBER(7,2)</td>
+<td>月薪，工资</td>
+</tr>
+<tr>
+<td>7</td>
+<td>COMM</td>
+<td>NUMBER(7,2)</td>
+<td>奖金或佣金</td>
+</tr>
+<tr>
+<td><font color="orange">8</font></td>
+<td><font color="orange">DEPINO</font></td>
+<td><font color="orange">NUMBER(2)</font></td>
+<td><font color="orange">部门编号</font></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>DEPT(部门表)：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>NO</th>
+<th>字段</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><font color="orange">1</font></td>
+<td><font color="orange">DEPTNO</font></td>
+<td><font color="orange">NUMBER(2)</font></td>
+<td><font color="orange">部门编号</font></td>
+</tr>
+<tr>
+<td>2</td>
+<td>DNAME</td>
+<td>VARCHAR2(14)</td>
+<td>部门名称</td>
+</tr>
+<tr>
+<td>3</td>
+<td>LOC</td>
+<td>VARCHAR2(13)</td>
+<td>部门位置</td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>员工所处的部门编号由DEPINO表示，而部门表里面也有用DEPINO表示部门编号。<br>要想得到员工所处的部门信息得通过emp表找到员工的DEPINO信息，再到dept表里面通过DEPINO找到部门信息。<br>两个表利用DEPINO连接起来了于是emp表里面的DEPINO被称作为<font color="blue">外键</font>，而dept表里面的DEPINO被称作为<font color="blue">主键</font></p>
+<p><font color="red">两张表之间通过 外键-主键 建立关联关系</font>。</p>
+</blockquote>
+<p>BONUS(奖金表)：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>NO</th>
+<th>字段</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ENAME</td>
+<td>VARCHAR2(10)</td>
+<td>雇员姓名</td>
+</tr>
+<tr>
+<td>2</td>
+<td>JOB</td>
+<td>VARCHAR2(9)</td>
+<td>雇员工作</td>
+</tr>
+<tr>
+<td>3</td>
+<td>SAL</td>
+<td>NUMBER</td>
+<td>雇员工资</td>
+</tr>
+<tr>
+<td>4</td>
+<td>COMM</td>
+<td>NUMBER</td>
+<td>雇员奖金</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>SALGRADE(工资等级表)：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>NO</th>
+<th>字段</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>GRADE</td>
+<td>NUMBER</td>
+<td>等级名称</td>
+</tr>
+<tr>
+<td>2</td>
+<td>LOSAL</td>
+<td>NUMBER</td>
+<td>此等级的最低工资</td>
+</tr>
+<tr>
+<td>3</td>
+<td>HISAL</td>
+<td>NUMBER</td>
+<td>此等级的最高工资</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="属性格式"><a href="#属性格式" class="headerlink" title="属性格式"></a>属性格式</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>SQL数据库类型</th>
+<th>标准Java类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CHAR</td>
+<td>java.lang.String</td>
+</tr>
+<tr>
+<td>VARCHAR2</td>
+<td>java.lang.String</td>
+</tr>
+<tr>
+<td>LONG</td>
+<td>java.lang.String</td>
+</tr>
+<tr>
+<td>NUMBER</td>
+<td>byte</td>
+</tr>
+<tr>
+<td>NUMBER</td>
+<td>short</td>
+</tr>
+<tr>
+<td>NUMBER</td>
+<td>int</td>
+</tr>
+<tr>
+<td>NUMBER</td>
+<td>long</td>
+</tr>
+<tr>
+<td>NUMBER</td>
+<td>float</td>
+</tr>
+<tr>
+<td>NUMBER</td>
+<td>double</td>
+</tr>
+<tr>
+<td>DATE</td>
+<td>java.sql.Date</td>
+</tr>
+<tr>
+<td>DATE</td>
+<td>java.sql.Time</td>
+</tr>
+<tr>
+<td>BLOB</td>
+<td>java.sql.Blob()</td>
+</tr>
+<tr>
+<td>CLOB</td>
+<td>java.sql.Clob()</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>通过查看表格字段可以看出每个数据的类型除了表明所属的属性外，有些后面还会带一些数字：</p>
+<ul>
+<li><p>NUMBER(几位整数,几位小数)：</p>
+<p>例如：NUMBER(4)：表示属性为<font color="blue">四位整数</font>的<font color="blue">整形数据</font>。</p>
+<pre><code>          NUMBER(4,2)：表示属性为&lt;font color=blue&gt;四位整数两位小数&lt;/font&gt;的&lt;font color=blue&gt;浮点类型&lt;/font&gt;。
+</code></pre></li>
+<li><p>DATE属于<font color="red">日期类</font>，默认的格式为<font color="blue">日-月-年</font>。</p>
+</li>
+<li><p>BLOB属于<font color="red">二进制</font>类型，通常存放图片，电影等数据。</p>
+</li>
+<li><p>CLOB为<font color="red">大字符串</font>类型，通常存放小说、长篇文章等大数据字符串数据。</p>
+</li>
+</ul>
+<hr>
+<h2 id="语句改错"><a href="#语句改错" class="headerlink" title="语句改错"></a>语句改错</h2><ol>
+<li>输入格式：<code>c /错误命令句/修正命令句;</code></li>
+</ol>
+<p><img src="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7IihgQPm*ItyKz1sqRNk1*WWgIYf7zNkzRVqXlIgdMzZoKRqWiF*UkUv1ZHe1eJLzjJJQxWcCSL0.DZjcAzJ3kU!/b&amp;bo=xAKBAcQCgQEDGTw!&amp;rf=viewer_4" alt>可以看出上一行命令：<code>select *from salgade</code>中表名打错字了，应该为<code>salgrade</code>，通过输入：<font color="blue"><code>c /salgade/salgrade;+回车</code></font>修改数据。同输出修改后的命令语句判断是否正确，如果修改无误，输入<code>/</code>表示确定。而命令行里面<code>c</code>也代表<font color="blue">change</font>的意思。</p>
+<hr>
+<ol>
+<li>输入格式：<code>ed</code></li>
+</ol>
+<p><img src="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7CMKtxStV*CH5z5nDYUVXjv2nshDVA4xVTUZGb8tphRGs.mLL2J2g8F*JGQfIABQ0Ych7fGRuzgQX0USBDAER.M!/b&amp;bo=oQLPAKECzwADGTw!&amp;rf=viewer_4" alt></p>
+<p>输入<font color="blue"><code>ed</code></font>，弹出记事本，上面显示你上一次输入的命令，可以随意修改退出之后，输出修改后的数据，与<code>c</code>类似，通过输入<code>/</code>表示确定修改。</p>
+<blockquote>
+<p> <font color="red">注意</font>：记事本里面第二行的<font color="red"><code>/</code></font>相当于你在cmd里面输入的<font color="red"><code>;</code></font>不用删除、也不用在第一行的代码最后加上分号。</p>
+</blockquote>
+<hr>
+<h2 id="SQL控制行列数据"><a href="#SQL控制行列数据" class="headerlink" title="SQL控制行列数据"></a>SQL控制行列数据</h2><p>sql中通过<font color="red">where控制行</font>，通过<font color="red">select控制列</font>。</p>
+<p><font color="red">控制列</font>输入格式：<code>select 字段 from 表格名;</code></p>
+<p><img src="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7CmI4ezcmKyfd.kf49TNoD7s7ttQOHMN4nTzqjEgtQ6PlTfd67S9Ok3bQiLFg2GqGS*xoWE*ksRo1LwUW*H4yNA!/b&amp;bo=swLTAbMC0wEDGTw!&amp;rf=viewer_4" alt></p>
+<p><font color="red">控制行</font>输入格式：<code>select *from 表格名 where 判断语句;</code></p>
+<p><img src="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7B0liiZODTq7iH7*JZ8CkNZj02tIt0NOoVnW1vanpgNlT.r35ckxCcUkoGOr15A*8FiWguVfpsu2TWOww8KNdBM!/b&amp;bo=8AIDAfACAwEDGTw!&amp;rf=viewer_4" alt></p>
+<blockquote>
+<p> 而之前输入的<code>select *from emp;</code>中<code>*</code>代表的是<font color="red">输出所有列数据</font>。</p>
+</blockquote>
+<p><font color="red">字段名修改</font>输入格式：<code>select 字段 (as) 修改名 from 表格名 ;</code></p>
+<p><img src="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7I.W446EFBZkT8uCyNCdC.4IOjIGpqmbMQqBJ05Sz0duekP6FkReG8ejubwSsg6bVqsGKNwoOYZe.0xzmuuPf4w!/b&amp;bo=GwO.ARsDvgEDGTw!&amp;rf=viewer_4" alt></p>
+<p><font color="red">图中给出了三种表示的方式</font>，前两者没任何区别，但是第三个方式与前两个存在差别。</p>
+<p><img src="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7E2uxldMBni.v40PnGH3VSwy6f2bUbe99qmohCjCR99hCW6CJbrreRNoE0Hp8b.LUEhiUaRqo.w0ToaXc6WWI5U!/b&amp;bo=DwLwAA8C8AADGTw!&amp;rf=viewer_4" alt></p>
+<p>从图可以看出在涉及到<font color="blue">字符串之间的空格</font>与<font color="blue">特殊命令语句</font>的时候若不用双引号加以区分，会报错。</p>
+<blockquote>
+<p><font color="red">注意</font>：在sql里面<font color="blue">字符</font>得用<font color="red">单引号</font>引起来，例如：字符串、字符、日期…..（注意：区分大小写）<br>            在sql里面对于一些<font color="blue">关键字</font>或者<font color="blue">命令</font>是<font color="red">不区分大小写</font>，但是对于<font color="blue">数据</font>严格<font color="red">区分大小写</font>。 </p>
+<p><img src="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7D7sX9hdIoxn1FKsHEyIWL4qWa.zcAfKCYrO0UkOoMubI3dlTfRyyYsCPvuy5OlHuAEVIYXy7p1sr9GD.CfxMwI!/b&amp;bo=1QJLAdUCSwEDGTw!&amp;rf=viewer_4" alt></p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -200,300 +552,119 @@
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/15/Oracle数据库学习-一/" class="archive-article-date">
-  	<time datetime="2020-01-15T11:21:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/15/Oracle数据库学习-一/">Oracle数据库学习(一)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Oracle学习笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+
       
+
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/13/hexo博客搭建/" class="archive-article-date">
-  	<time datetime="2019-07-13T04:53:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/13/hexo博客搭建/">hexo博客搭建</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">博客搭建</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/01/19/Oracle数据库学习-二/" alt="微信分享二维码">
+    </div>
+</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/11/线代学习笔记——12图与网络/" class="archive-article-date">
-  	<time datetime="2019-07-11T02:50:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/01/15/Oracle数据库学习-一/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Oracle数据库学习(一)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/11/线代学习笔记——12图与网络/">线代学习笔记——12图与网络</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">线代</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本概念"><span class="toc-number">1.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#属性格式"><span class="toc-number">2.</span> <span class="toc-text">属性格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#语句改错"><span class="toc-number">3.</span> <span class="toc-text">语句改错</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL控制行列数据"><span class="toc-number">4.</span> <span class="toc-text">SQL控制行列数据</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/09/算法导论习题4-5/" class="archive-article-date">
-  	<time datetime="2019-07-09T11:06:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-09</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/09/算法导论习题4-5/">算法导论习题4-5</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法导论</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/08/hexo文章的创建/" class="archive-article-date">
-  	<time datetime="2019-07-08T01:28:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/08/hexo文章的创建/">hexo文章的创建</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">格式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/07/hello-world/" class="archive-article-date">
-  	<time datetime="2019-07-07T02:59:15.832Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/07/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/06/这只是一个测试/" class="archive-article-date">
-  	<time datetime="2019-07-06T10:29:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/06/这只是一个测试/">这只是一个测试</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -516,8 +687,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

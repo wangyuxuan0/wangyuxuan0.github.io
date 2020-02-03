@@ -6,29 +6,34 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Oracle数据库学习(二) | Dream博客</title>
+  <title>Oracle数据库学习-二 | Dream博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Oracle基础命令的讲解，主要围绕oracle数据库基本查看方式，查找操作。oracle数据库的下载与设置不做任何讲解，若防止设置错误、推荐视频：oracle安装与设置。">
 <meta name="keywords" content="Oracle学习笔记,笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Oracle数据库学习(二)">
+<meta property="og:title" content="Oracle数据库学习-二">
 <meta property="og:url" content="http://yoursite.com/2020/01/19/Oracle数据库学习-二/index.html">
 <meta property="og:site_name" content="Dream博客">
 <meta property="og:description" content="Oracle基础命令的讲解，主要围绕oracle数据库基本查看方式，查找操作。oracle数据库的下载与设置不做任何讲解，若防止设置错误、推荐视频：oracle安装与设置。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7Av6tBXZZM9jhM07VUOGP*JssiuOuL3FaAgOClMEY4pad9LI5eZq16pGdwKFYwINhHnLc5oI4GS04l3Sg6VOmns!/b&bo=lQUDAZUFAwEDGTw!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7IihgQPm*ItyKz1sqRNk1*WWgIYf7zNkzRVqXlIgdMzZoKRqWiF*UkUv1ZHe1eJLzjJJQxWcCSL0.DZjcAzJ3kU!/b&bo=xAKBAcQCgQEDGTw!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7CMKtxStV*CH5z5nDYUVXjv2nshDVA4xVTUZGb8tphRGs.mLL2J2g8F*JGQfIABQ0Ych7fGRuzgQX0USBDAER.M!/b&bo=oQLPAKECzwADGTw!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7CmI4ezcmKyfd.kf49TNoD7s7ttQOHMN4nTzqjEgtQ6PlTfd67S9Ok3bQiLFg2GqGS*xoWE*ksRo1LwUW*H4yNA!/b&bo=swLTAbMC0wEDGTw!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7B0liiZODTq7iH7*JZ8CkNZj02tIt0NOoVnW1vanpgNlT.r35ckxCcUkoGOr15A*8FiWguVfpsu2TWOww8KNdBM!/b&bo=8AIDAfACAwEDGTw!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7I.W446EFBZkT8uCyNCdC.4IOjIGpqmbMQqBJ05Sz0duekP6FkReG8ejubwSsg6bVqsGKNwoOYZe.0xzmuuPf4w!/b&bo=GwO.ARsDvgEDGTw!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7E2uxldMBni.v40PnGH3VSwy6f2bUbe99qmohCjCR99hCW6CJbrreRNoE0Hp8b.LUEhiUaRqo.w0ToaXc6WWI5U!/b&bo=DwLwAA8C8AADGTw!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7D7sX9hdIoxn1FKsHEyIWL4qWa.zcAfKCYrO0UkOoMubI3dlTfRyyYsCPvuy5OlHuAEVIYXy7p1sr9GD.CfxMwI!/b&bo=1QJLAdUCSwEDGTw!&rf=viewer_4">
-<meta property="og:updated_time" content="2020-02-03T07:58:35.630Z">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/kXrALJf9cCs74Ew.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/hqyOxkPTG5Z8vXM.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/zKhaHwQGWs19ISL.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/urxYyBwcNkvZT3b.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/RQNtsZ4UEn7lM5T.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/ZzNaobQg2BE56fA.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/HZXYyjTEa67WI9g.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/vr6NzSiDZbnRYqd.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/gvMSIzCQHfR1eGF.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/5FYjfHKOlymv436.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/rwqj1ZIpFKuQ86o.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/CePYTNvQA4Zrz58.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/LbV1JSFZdgxGW8A.png">
+<meta property="og:updated_time" content="2020-02-03T09:02:58.763Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Oracle数据库学习(二)">
+<meta name="twitter:title" content="Oracle数据库学习-二">
 <meta name="twitter:description" content="Oracle基础命令的讲解，主要围绕oracle数据库基本查看方式，查找操作。oracle数据库的下载与设置不做任何讲解，若防止设置错误、推荐视频：oracle安装与设置。">
-<meta name="twitter:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7Av6tBXZZM9jhM07VUOGP*JssiuOuL3FaAgOClMEY4pad9LI5eZq16pGdwKFYwINhHnLc5oI4GS04l3Sg6VOmns!/b&bo=lQUDAZUFAwEDGTw!&rf=viewer_4">
+<meta name="twitter:image" content="https://i.loli.net/2020/02/03/kXrALJf9cCs74Ew.png">
   
     <link rel="alternative" href="/atom.xml" title="Dream博客" type="application/atom+xml">
   
@@ -175,7 +180,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Oracle数据库学习(二)
+      Oracle数据库学习-二
     </h1>
   
 
@@ -192,122 +197,105 @@
 <a id="more"></a>
 <hr>
 <h1 id="oracle命令"><a href="#oracle命令" class="headerlink" title="oracle命令"></a>oracle命令</h1><h2 id="用户登陆"><a href="#用户登陆" class="headerlink" title="用户登陆"></a>用户登陆</h2><blockquote>
-<p>命令输入全部在cmd内进行</p>
+<p>命令输入全部在cmd内进行。</p>
 </blockquote>
-<p>首先要想操作数据库就得<font color="red">连接数据库</font>，输入命令：<code>sqlplus 用户名/密码</code>。</p>
-<font color="red">注</font>：数据库的用户有三种，超级管理员，普通管理员，普通用户。这里只使用普通用户。
-![1.png](https://i.loli.net/2020/02/03/kXrALJf9cCs74Ew.png)
-
-当然，若想<font color="red">查找自己连接的用户名</font>，也可以输入：`show user`查看。
-
-![](http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7KcjRx03.IxzCbRbGmzBTYWrMXmqKtdgY58K5iWwjfPVDyoXygQm27XwSAh20ReOyHzth6N9KfrBjyMkxBWTuuM!/b&bo=2wJlANsCZQADGTw!&rf=viewer_4)
-
-
-> <font color="red">注意</font>：有些资料里面用<font color="blue">方案</font>代替了<font color="blue">用户</font>，<font color="blue">方案</font>也就相当于<font color="blue">用户</font>。
-
----
-
-## 查找
-
-oracle数据库在下载好之后里面是已经存在一些已有的表格和信息，通过输入：`select *from tab;`可以在数据库内<font color="red">查找已存在的表格</font>。
-
-![](http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7C4da6bQqWdrdBgNQZAVJDoKsnfh24c9n9AvjXiUZaiZkeD8bbu6qvhD*p6ShZam99T2CMowzNMhiiFLmBG0R8U!/b&bo=NwLAADcCwAADGTw!&rf=viewer_4)
-
----
-
-输入：`select *from 表格名;`可以<font color="red">查看表格信息</font>。
-
-![](http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7NIm8mJwuDJ2oz*ORIUe3xwRrvr1qdmYFBd0uV1WgmEi3NVZQclOppoJCBCW4C3qxm.8VZeQkSrRXFbM7eGnVUE!/b&bo=0gNIA9IDSAMDGTw!&rf=viewer_4)
-
-可以看到bonus表格没有任何信息，dopt表格与emp表格存在一些信息，但是emp表格感觉信息摆放的有些不合理。
-
-因为长度设置有限，使得表格信息部分重叠。
-
----
-
-输入命令：`set line 长度` <font color="red">设置自己想要的表格长度</font>。
-
-![](http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7G.B2LQKQHJDRKkTsRA0BXvczVQWK8kjBR78jiGoAUzZNAwKT2GkUcO7J4BN.sGMnR5eOfRdgWJD1.MDHWBS.Kg!/b&bo=MwToATME6AEDGTw!&rf=viewer_4)
-
----
-
-同样输入：`desc 表名`可以<font color="red">查看表格字段</font>
-
-<p><img src="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7Av6tBXZZM9jhM07VUOGP*JssiuOuL3FaAgOClMEY4pad9LI5eZq16pGdwKFYwINhHnLc5oI4GS04l3Sg6VOmns!/b&amp;bo=lQUDAZUFAwEDGTw!&amp;rf=viewer_4" alt></p>
+<p>首先要想操作数据库就得<font color="red">连接数据库</font>，输入命令：<code>sqlplus 用户名/密码</code></p>
+<p><img src="https://i.loli.net/2020/02/03/kXrALJf9cCs74Ew.png" alt="1.png"></p>
+<blockquote>
+<p><font color="red">注意</font>： 数据库用户有三个，超级管理员用户、普通管理员用户、普通用户。用普通用户学习即可。</p>
+</blockquote>
+<hr>
+<p>若想<font color="red">查找自己连接的用户名</font>，输入：<code>show user</code></p>
+<p><img src="https://i.loli.net/2020/02/03/hqyOxkPTG5Z8vXM.png" alt="2.png"></p>
+<blockquote>
+<p><font color="red">注意</font>：有些资料里面用<font color="blue">方案</font>代替了<font color="blue">用户</font>，<font color="blue">方案</font>也就相当于<font color="blue">用户</font>。</p>
+</blockquote>
+<hr>
+<h2 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h2><p>oracle数据库在下载好之后里面是已经存在一些已有的表格和信息，通过输入：<code>select *from tab;</code>可以在数据库内<font color="red">查找已存在的表格</font>。</p>
+<blockquote>
+<p>这里不一样很正常，博主已经在里面创建了一些表格，不会影响后面的使用。</p>
+</blockquote>
+<p><img src="https://i.loli.net/2020/02/03/zKhaHwQGWs19ISL.png" alt="3.png"></p>
+<hr>
+<p>输入：<code>select *from 表格名;</code>可以<font color="red">查看表格信息</font>。</p>
+<p><img src="https://i.loli.net/2020/02/03/urxYyBwcNkvZT3b.png" alt="4.png"></p>
+<p>可以看到bonus表格没有任何信息，dept表格与emp表格存在一些信息，但是emp表格感觉信息摆放的有些不合理。<br>因为长度设置有限，使得表格信息部分重叠。</p>
+<hr>
+<p>输入命令：<code>set linesize 长度</code> <font color="red">设置自己想要的表格长度</font>。</p>
+<p><img src="https://i.loli.net/2020/02/03/RQNtsZ4UEn7lM5T.png" alt="5.png"></p>
+<hr>
+<p>同样输入：<code>desc 表名</code>可以<font color="red">查看表格字段</font></p>
+<p><img src="https://i.loli.net/2020/02/03/ZzNaobQg2BE56fA.png" alt="6.png"></p>
 <hr>
 <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><blockquote>
 <p> 当然啦，表格信息是摆法合理了但是看不懂也没有任何作用，以下就是<font color="red">表格信息的部分解释</font>：</p>
 </blockquote>
 <ul>
 <li><strong>实体</strong><br>   相当于java里面的<font color="blue">类</font>，用于指<font color="red">某类事物的集合</font>。</li>
+<li><strong>记录</strong><br> 相当于java里面的<font color="blue">对象</font>，也对应于表格里面的一<font color="red">行数据</font>。</li>
+<li><strong>字段</strong><br> 相当于java里面的<font color="blue">属性</font>，也对应于表格里面的一<font color="red">列数据</font>。</li>
+<li><strong>表</strong><br> 全部<strong>字段</strong> + 全部<strong>记录</strong>组合成的。</li>
 </ul>
-<ul>
-<li><p><strong>记录</strong><br> 相当于java里面的<font color="blue">对象</font>，也对应于表格里面的一<font color="red">行数据</font>。</p>
-</li>
-<li><p><strong>字段</strong><br> 相当于java里面的<font color="blue">属性</font>，也对应于表格里面的一<font color="red">列数据</font>。</p>
-</li>
-<li><p><strong>表</strong><br> 全部<strong>字段</strong> + 全部<strong>记录</strong>组合成的。</p>
-</li>
-</ul>
+<hr>
 <p>EMP(雇员表)：</p>
 <div class="table-container">
 <table>
 <thead>
 <tr>
-<th>NO</th>
-<th>字段</th>
-<th>类型</th>
-<th>描述</th>
+<th style="text-align:center">NO</th>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td>EMPNO</td>
-<td>NUMBER(4)</td>
-<td>雇员编号</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">EMPNO</td>
+<td style="text-align:center">NUMBER(4)</td>
+<td style="text-align:center">雇员编号</td>
 </tr>
 <tr>
-<td>2</td>
-<td>ENAME</td>
-<td>VARCHAR2(10)</td>
-<td>雇员姓名</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">ENAME</td>
+<td style="text-align:center">VARCHAR2(10)</td>
+<td style="text-align:center">雇员姓名</td>
 </tr>
 <tr>
-<td>3</td>
-<td>JOB</td>
-<td>VARCHAR2(9)</td>
-<td>工作职位</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">JOB</td>
+<td style="text-align:center">VARCHAR2(9)</td>
+<td style="text-align:center">工作职位</td>
 </tr>
 <tr>
-<td>4</td>
-<td>MGR</td>
-<td>NUMBER(4)</td>
-<td>一个雇员的领导编号</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">MGR</td>
+<td style="text-align:center">NUMBER(4)</td>
+<td style="text-align:center">一个雇员的领导编号</td>
 </tr>
 <tr>
-<td>5</td>
-<td>HIREDATE</td>
-<td>DATE</td>
-<td>雇佣日期</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">HIREDATE</td>
+<td style="text-align:center">DATE</td>
+<td style="text-align:center">雇佣日期</td>
 </tr>
 <tr>
-<td>6</td>
-<td>SAL</td>
-<td>NUMBER(7,2)</td>
-<td>月薪，工资</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">SAL</td>
+<td style="text-align:center">NUMBER(7,2)</td>
+<td style="text-align:center">月薪，工资</td>
 </tr>
 <tr>
-<td>7</td>
-<td>COMM</td>
-<td>NUMBER(7,2)</td>
-<td>奖金或佣金</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">COMM</td>
+<td style="text-align:center">NUMBER(7,2)</td>
+<td style="text-align:center">奖金或佣金</td>
 </tr>
 <tr>
-<td><font color="orange">8</font></td>
-<td><font color="orange">DEPINO</font></td>
-<td><font color="orange">NUMBER(2)</font></td>
-<td><font color="orange">部门编号</font></td>
+<td style="text-align:center"><font color="orange">8</font></td>
+<td style="text-align:center"><font color="orange">DEPINO</font></td>
+<td style="text-align:center"><font color="orange">NUMBER(2)</font></td>
+<td style="text-align:center"><font color="orange">部门编号</font></td>
 </tr>
 </tbody>
 </table>
@@ -317,30 +305,30 @@ oracle数据库在下载好之后里面是已经存在一些已有的表格和�
 <table>
 <thead>
 <tr>
-<th>NO</th>
-<th>字段</th>
-<th>类型</th>
-<th>描述</th>
+<th style="text-align:center">NO</th>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><font color="orange">1</font></td>
-<td><font color="orange">DEPTNO</font></td>
-<td><font color="orange">NUMBER(2)</font></td>
-<td><font color="orange">部门编号</font></td>
+<td style="text-align:center"><font color="orange">1</font></td>
+<td style="text-align:center"><font color="orange">DEPTNO</font></td>
+<td style="text-align:center"><font color="orange">NUMBER(2)</font></td>
+<td style="text-align:center"><font color="orange">部门编号</font></td>
 </tr>
 <tr>
-<td>2</td>
-<td>DNAME</td>
-<td>VARCHAR2(14)</td>
-<td>部门名称</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">DNAME</td>
+<td style="text-align:center">VARCHAR2(14)</td>
+<td style="text-align:center">部门名称</td>
 </tr>
 <tr>
-<td>3</td>
-<td>LOC</td>
-<td>VARCHAR2(13)</td>
-<td>部门位置</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">LOC</td>
+<td style="text-align:center">VARCHAR2(13)</td>
+<td style="text-align:center">部门位置</td>
 </tr>
 </tbody>
 </table>
@@ -354,36 +342,36 @@ oracle数据库在下载好之后里面是已经存在一些已有的表格和�
 <table>
 <thead>
 <tr>
-<th>NO</th>
-<th>字段</th>
-<th>类型</th>
-<th>描述</th>
+<th style="text-align:center">NO</th>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td>ENAME</td>
-<td>VARCHAR2(10)</td>
-<td>雇员姓名</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">ENAME</td>
+<td style="text-align:center">VARCHAR2(10)</td>
+<td style="text-align:center">雇员姓名</td>
 </tr>
 <tr>
-<td>2</td>
-<td>JOB</td>
-<td>VARCHAR2(9)</td>
-<td>雇员工作</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">JOB</td>
+<td style="text-align:center">VARCHAR2(9)</td>
+<td style="text-align:center">雇员工作</td>
 </tr>
 <tr>
-<td>3</td>
-<td>SAL</td>
-<td>NUMBER</td>
-<td>雇员工资</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">SAL</td>
+<td style="text-align:center">NUMBER</td>
+<td style="text-align:center">雇员工资</td>
 </tr>
 <tr>
-<td>4</td>
-<td>COMM</td>
-<td>NUMBER</td>
-<td>雇员奖金</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">COMM</td>
+<td style="text-align:center">NUMBER</td>
+<td style="text-align:center">雇员奖金</td>
 </tr>
 </tbody>
 </table>
@@ -393,30 +381,30 @@ oracle数据库在下载好之后里面是已经存在一些已有的表格和�
 <table>
 <thead>
 <tr>
-<th>NO</th>
-<th>字段</th>
-<th>类型</th>
-<th>描述</th>
+<th style="text-align:center">NO</th>
+<th style="text-align:center">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td>GRADE</td>
-<td>NUMBER</td>
-<td>等级名称</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">GRADE</td>
+<td style="text-align:center">NUMBER</td>
+<td style="text-align:center">等级名称</td>
 </tr>
 <tr>
-<td>2</td>
-<td>LOSAL</td>
-<td>NUMBER</td>
-<td>此等级的最低工资</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">LOSAL</td>
+<td style="text-align:center">NUMBER</td>
+<td style="text-align:center">此等级的最低工资</td>
 </tr>
 <tr>
-<td>3</td>
-<td>HISAL</td>
-<td>NUMBER</td>
-<td>此等级的最高工资</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">HISAL</td>
+<td style="text-align:center">NUMBER</td>
+<td style="text-align:center">此等级的最高工资</td>
 </tr>
 </tbody>
 </table>
@@ -426,111 +414,106 @@ oracle数据库在下载好之后里面是已经存在一些已有的表格和�
 <table>
 <thead>
 <tr>
-<th>SQL数据库类型</th>
-<th>标准Java类型</th>
+<th style="text-align:center">SQL数据库类型</th>
+<th style="text-align:center">标准Java类型</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>CHAR</td>
-<td>java.lang.String</td>
+<td style="text-align:center">CHAR</td>
+<td style="text-align:center">java.lang.String</td>
 </tr>
 <tr>
-<td>VARCHAR2</td>
-<td>java.lang.String</td>
+<td style="text-align:center">VARCHAR2</td>
+<td style="text-align:center">java.lang.String</td>
 </tr>
 <tr>
-<td>LONG</td>
-<td>java.lang.String</td>
+<td style="text-align:center">LONG</td>
+<td style="text-align:center">java.lang.String</td>
 </tr>
 <tr>
-<td>NUMBER</td>
-<td>byte</td>
+<td style="text-align:center">NUMBER</td>
+<td style="text-align:center">byte</td>
 </tr>
 <tr>
-<td>NUMBER</td>
-<td>short</td>
+<td style="text-align:center">NUMBER</td>
+<td style="text-align:center">short</td>
 </tr>
 <tr>
-<td>NUMBER</td>
-<td>int</td>
+<td style="text-align:center">NUMBER</td>
+<td style="text-align:center">int</td>
 </tr>
 <tr>
-<td>NUMBER</td>
-<td>long</td>
+<td style="text-align:center">NUMBER</td>
+<td style="text-align:center">long</td>
 </tr>
 <tr>
-<td>NUMBER</td>
-<td>float</td>
+<td style="text-align:center">NUMBER</td>
+<td style="text-align:center">float</td>
 </tr>
 <tr>
-<td>NUMBER</td>
-<td>double</td>
+<td style="text-align:center">NUMBER</td>
+<td style="text-align:center">double</td>
 </tr>
 <tr>
-<td>DATE</td>
-<td>java.sql.Date</td>
+<td style="text-align:center">DATE</td>
+<td style="text-align:center">java.sql.Date</td>
 </tr>
 <tr>
-<td>DATE</td>
-<td>java.sql.Time</td>
+<td style="text-align:center">DATE</td>
+<td style="text-align:center">java.sql.Time</td>
 </tr>
 <tr>
-<td>BLOB</td>
-<td>java.sql.Blob</td>
+<td style="text-align:center">BLOB</td>
+<td style="text-align:center">java.sql.Blob</td>
 </tr>
 <tr>
-<td>CLOB</td>
-<td>java.sql.Clob</td>
+<td style="text-align:center">CLOB</td>
+<td style="text-align:center">java.sql.Clob</td>
 </tr>
 </tbody>
 </table>
 </div>
 <p>通过查看表格字段可以看出每个数据的类型除了表明所属的属性外，有些后面还会带一些数字：</p>
 <ul>
-<li><p>NUMBER(几位整数,几位小数)：</p>
-<p>例如：NUMBER(4)：表示属性为<font color="blue">四位整数</font>的<font color="blue">整形数据</font></p>
-<p>NUMBER(4,2)：表示属性为<font color="blue">四位整数两位小数</font>的<font color="blue">浮点类型</font>。</p>
-</li>
-<li><p>DATE属于<font color="red">日期类</font>，默认的格式为<font color="blue">日-月-年</font>。</p>
-</li>
-<li><p>BLOB属于<font color="red">二进制</font>类型，通常存放图片，电影等数据。</p>
-</li>
-<li><p>CLOB为<font color="red">大字符串</font>类型，通常存放小说、长篇文章等大数据字符串数据。</p>
-</li>
+<li>NUMBER(几位整数,几位小数)：<br>例如：NUMBER(4)：表示属性为<font color="blue">四位整数</font>的<font color="blue">整形数据</font>，而NUMBER(4,2)：表示属性为<font color="blue">四位整数两位小数</font>的<font color="blue">浮点类型</font>。</li>
+<li>DATE属于<font color="red">日期类</font>，默认的格式为<font color="blue">日-月-年</font>。</li>
+<li>BLOB属于<font color="red">二进制</font>类型，通常存放图片，电影等数据。</li>
+<li>CLOB为<font color="red">大字符串</font>类型，通常存放小说、长篇文章等大数据字符串数据。</li>
 </ul>
 <hr>
-<h2 id="语句改错"><a href="#语句改错" class="headerlink" title="语句改错"></a>语句改错</h2><ol>
+<h2 id="语句改错"><a href="#语句改错" class="headerlink" title="语句改错"></a>语句改错</h2><ul>
 <li>输入格式：<code>c /错误命令句/修正命令句;</code></li>
-</ol>
-<p><img src="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7IihgQPm*ItyKz1sqRNk1*WWgIYf7zNkzRVqXlIgdMzZoKRqWiF*UkUv1ZHe1eJLzjJJQxWcCSL0.DZjcAzJ3kU!/b&amp;bo=xAKBAcQCgQEDGTw!&amp;rf=viewer_4" alt>可以看出上一行命令：<code>select *from salgade</code>中表名打错字了，应该为<code>salgrade</code>，通过输入：<font color="blue"><code>c /salgade/salgrade;+回车</code></font>修改数据。同输出修改后的命令语句判断是否正确，如果修改无误，输入<code>/</code>表示确定。而命令行里面<code>c</code>也代表<font color="blue">change</font>的意思。</p>
+</ul>
+<p><img src="https://i.loli.net/2020/02/03/HZXYyjTEa67WI9g.png" alt="7.png"></p>
+<p>上一行命令：<code>select *from salgade</code>中表名打错字了，应该为<code>salgrade</code>，通过输入：<code>c /salgade/salgrade;+回车</code>修改数据。<br>同时输出修改后的命令语句，判断是否正确，如果修改无误，输入<code>/</code>表示确定。而命令行里面的<code>c</code>也代表change的意思。 </p>
 <hr>
-<ol>
+<ul>
 <li>输入格式：<code>ed</code></li>
-</ol>
-<p><img src="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7CMKtxStV*CH5z5nDYUVXjv2nshDVA4xVTUZGb8tphRGs.mLL2J2g8F*JGQfIABQ0Ych7fGRuzgQX0USBDAER.M!/b&amp;bo=oQLPAKECzwADGTw!&amp;rf=viewer_4" alt></p>
-<p>输入<font color="blue"><code>ed</code></font>，弹出记事本，上面显示你上一次输入的命令，可以随意修改退出之后，输出修改后的数据，与<code>c</code>类似，通过输入<code>/</code>表示确定修改。</p>
+</ul>
+<p><img src="https://i.loli.net/2020/02/03/vr6NzSiDZbnRYqd.png" alt="8.png"></p>
+<p>输入<font color="blue"><code>ed</code></font>，弹出记事本，上面显示你上一次输入的命令，可以随意修改退出之后，输出修改后的数据，与<code>c</code>类似，通过输入<code>/</code>确定修改。</p>
 <blockquote>
 <p> <font color="red">注意</font>：记事本里面第二行的<font color="red"><code>/</code></font>相当于你在cmd里面输入的<font color="red"><code>;</code></font>不用删除、也不用在第一行的代码最后加上分号。</p>
 </blockquote>
 <hr>
 <h2 id="SQL控制行列数据"><a href="#SQL控制行列数据" class="headerlink" title="SQL控制行列数据"></a>SQL控制行列数据</h2><p>sql中通过<font color="red">where控制行</font>，通过<font color="red">select控制列</font>。</p>
 <p><font color="red">控制列</font>输入格式：<code>select 字段 from 表格名;</code></p>
-<p><img src="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7CmI4ezcmKyfd.kf49TNoD7s7ttQOHMN4nTzqjEgtQ6PlTfd67S9Ok3bQiLFg2GqGS*xoWE*ksRo1LwUW*H4yNA!/b&amp;bo=swLTAbMC0wEDGTw!&amp;rf=viewer_4" alt></p>
-<p><font color="red">控制行</font>输入格式：<code>select *from 表格名 where 判断语句;</code></p>
-<p><img src="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7B0liiZODTq7iH7*JZ8CkNZj02tIt0NOoVnW1vanpgNlT.r35ckxCcUkoGOr15A*8FiWguVfpsu2TWOww8KNdBM!/b&amp;bo=8AIDAfACAwEDGTw!&amp;rf=viewer_4" alt></p>
+<p><img src="https://i.loli.net/2020/02/03/gvMSIzCQHfR1eGF.png" alt="9.png"></p>
+<p><font color="red">控制行</font>输入格式：<code>select ... from 表格名 where 判断语句;</code></p>
+<p><img src="https://i.loli.net/2020/02/03/5FYjfHKOlymv436.png" alt="10.png"></p>
 <blockquote>
 <p> 而之前输入的<code>select *from emp;</code>中<code>*</code>代表的是<font color="red">输出所有列数据</font>。</p>
 </blockquote>
 <p><font color="red">字段名修改</font>输入格式：<code>select 字段 (as) 修改名 from 表格名 ;</code></p>
-<p><img src="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7I.W446EFBZkT8uCyNCdC.4IOjIGpqmbMQqBJ05Sz0duekP6FkReG8ejubwSsg6bVqsGKNwoOYZe.0xzmuuPf4w!/b&amp;bo=GwO.ARsDvgEDGTw!&amp;rf=viewer_4" alt></p>
+<p><img src="https://i.loli.net/2020/02/03/rwqj1ZIpFKuQ86o.png" alt="11.png"></p>
 <p><font color="red">图中给出了三种表示的方式</font>，前两者没任何区别，但是第三个方式与前两个存在差别。</p>
-<p><img src="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7E2uxldMBni.v40PnGH3VSwy6f2bUbe99qmohCjCR99hCW6CJbrreRNoE0Hp8b.LUEhiUaRqo.w0ToaXc6WWI5U!/b&amp;bo=DwLwAA8C8AADGTw!&amp;rf=viewer_4" alt></p>
+<p><img src="https://i.loli.net/2020/02/03/CePYTNvQA4Zrz58.png" alt="12.png"></p>
 <p>从图可以看出在涉及到<font color="blue">字符串之间的空格</font>与<font color="blue">特殊命令语句</font>的时候若不用双引号加以区分，会报错。</p>
 <blockquote>
 <p><font color="red">注意</font>：在sql里面<font color="blue">字符</font>得用<font color="red">单引号</font>引起来，例如：字符串、字符、日期…..（注意：区分大小写）<br>            在sql里面对于一些<font color="blue">关键字</font>或者<font color="blue">命令</font>是<font color="red">不区分大小写</font>，但是对于<font color="blue">数据</font>严格<font color="red">区分大小写</font>。 </p>
-<p><img src="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7D7sX9hdIoxn1FKsHEyIWL4qWa.zcAfKCYrO0UkOoMubI3dlTfRyyYsCPvuy5OlHuAEVIYXy7p1sr9GD.CfxMwI!/b&amp;bo=1QJLAdUCSwEDGTw!&amp;rf=viewer_4" alt></p>
 </blockquote>
+<p><img src="https://i.loli.net/2020/02/03/LbV1JSFZdgxGW8A.png" alt="13.png"></p>
 
       
 
@@ -647,7 +630,7 @@ oracle数据库在下载好之后里面是已经存在一些已有的表格和�
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#oracle命令"><span class="toc-number">1.</span> <span class="toc-text">oracle命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#用户登陆"><span class="toc-number">1.1.</span> <span class="toc-text">用户登陆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本概念"><span class="toc-number">1.2.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#属性格式"><span class="toc-number">1.3.</span> <span class="toc-text">属性格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#语句改错"><span class="toc-number">1.4.</span> <span class="toc-text">语句改错</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL控制行列数据"><span class="toc-number">1.5.</span> <span class="toc-text">SQL控制行列数据</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#oracle命令"><span class="toc-number">1.</span> <span class="toc-text">oracle命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#用户登陆"><span class="toc-number">1.1.</span> <span class="toc-text">用户登陆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查找"><span class="toc-number">1.2.</span> <span class="toc-text">查找</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本概念"><span class="toc-number">1.3.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#属性格式"><span class="toc-number">1.4.</span> <span class="toc-text">属性格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#语句改错"><span class="toc-number">1.5.</span> <span class="toc-text">语句改错</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL控制行列数据"><span class="toc-number">1.6.</span> <span class="toc-text">SQL控制行列数据</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -796,11 +779,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">线代</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">线代</a>
               </li>
              
               <li class="article-tag-list-item">

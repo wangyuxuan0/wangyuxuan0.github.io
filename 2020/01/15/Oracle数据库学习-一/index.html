@@ -16,13 +16,13 @@
 <meta property="og:site_name" content="Dream博客">
 <meta property="og:description" content="本篇文章只作为自身学习Oracle数据库时的笔记，用于之后的复习。若想详细学习数据库，可以关注此up主DT课堂原名颜群，本博主也是看着它的视频学习，勿扰。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7KI7Ne71dU.cQzjmoIIuDCFgwPTWf18dugbMlnfqlX2DAy9wyhNK3CdulUfboLR24wfhbw.vF21CYlaaQPqa7fM!/b&bo=RAO0AUQDtAEDGTw!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7LPuzL*Mrmj55UiknbhunnFphohoooH6nu2IEVn9ctgiUXiYdO9jILhksdtIk3jNRmxhfWAEYvkXDp.eg*sogro!/b&bo=*gObAQAAAAADF1U!&rf=viewer_4">
-<meta property="og:updated_time" content="2020-01-19T14:41:53.964Z">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/4BkDnt6s9cHmwq1.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/03/ALdC6RIHqtlvmeQ.png">
+<meta property="og:updated_time" content="2020-02-03T07:49:48.484Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Oracle数据库学习(一)">
 <meta name="twitter:description" content="本篇文章只作为自身学习Oracle数据库时的笔记，用于之后的复习。若想详细学习数据库，可以关注此up主DT课堂原名颜群，本博主也是看着它的视频学习，勿扰。">
-<meta name="twitter:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7KI7Ne71dU.cQzjmoIIuDCFgwPTWf18dugbMlnfqlX2DAy9wyhNK3CdulUfboLR24wfhbw.vF21CYlaaQPqa7fM!/b&bo=RAO0AUQDtAEDGTw!&rf=viewer_4">
+<meta name="twitter:image" content="https://i.loli.net/2020/02/03/4BkDnt6s9cHmwq1.png">
   
     <link rel="alternative" href="/atom.xml" title="Dream博客" type="application/atom+xml">
   
@@ -274,9 +274,9 @@
 <hr>
 <h2 id="组成结构"><a href="#组成结构" class="headerlink" title="组成结构"></a>组成结构</h2><p>硬盘里面有数据库，内存里面存在数据库的实例<br>而客户端就是访问内存里面数据库的实例</p>
 <p><font color="red">注意</font>：可以多个客户端访问一个数据库实例</p>
-<p><img src="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7KI7Ne71dU.cQzjmoIIuDCFgwPTWf18dugbMlnfqlX2DAy9wyhNK3CdulUfboLR24wfhbw.vF21CYlaaQPqa7fM!/b&amp;bo=RAO0AUQDtAEDGTw!&amp;rf=viewer_4" alt="P"></p>
+<p><img src="https://i.loli.net/2020/02/03/4BkDnt6s9cHmwq1.png" alt="psc.png"></p>
 <p>而数据库实例：</p>
-<p><img src="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7LPuzL*Mrmj55UiknbhunnFphohoooH6nu2IEVn9ctgiUXiYdO9jILhksdtIk3jNRmxhfWAEYvkXDp.eg*sogro!/b&amp;bo=*gObAQAAAAADF1U!&amp;rf=viewer_4" alt="A"></p>
+<p><img src="https://i.loli.net/2020/02/03/ALdC6RIHqtlvmeQ.png" alt="psc2.png"></p>
 <p><font color="red">注意</font>：一个PGA只能对应一个客户端。<br>而信息传输分两步：<br>                信息从客户端传入进PGA，PGA再把信息传入给SGA，在客户端未请求数据输出之前，SGA会把客户端之前的所有请求里面将重复/冗余的命令进行合并，简化再发送给硬盘里面的数据库</p>
 <p><font color="blue">好处</font>：减少了硬盘与内存之间的信息传输，提高了速度</p>
 <hr>
@@ -557,11 +557,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">线代</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">线代</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">

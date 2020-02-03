@@ -24,7 +24,7 @@
 <meta property="og:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7I.W446EFBZkT8uCyNCdC.4IOjIGpqmbMQqBJ05Sz0duekP6FkReG8ejubwSsg6bVqsGKNwoOYZe.0xzmuuPf4w!/b&bo=GwO.ARsDvgEDGTw!&rf=viewer_4">
 <meta property="og:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7E2uxldMBni.v40PnGH3VSwy6f2bUbe99qmohCjCR99hCW6CJbrreRNoE0Hp8b.LUEhiUaRqo.w0ToaXc6WWI5U!/b&bo=DwLwAA8C8AADGTw!&rf=viewer_4">
 <meta property="og:image" content="http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7D7sX9hdIoxn1FKsHEyIWL4qWa.zcAfKCYrO0UkOoMubI3dlTfRyyYsCPvuy5OlHuAEVIYXy7p1sr9GD.CfxMwI!/b&bo=1QJLAdUCSwEDGTw!&rf=viewer_4">
-<meta property="og:updated_time" content="2020-01-19T15:33:35.425Z">
+<meta property="og:updated_time" content="2020-02-03T07:26:56.300Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Oracle数据库学习(二)">
 <meta name="twitter:description" content="Oracle基础命令的讲解，主要围绕oracle数据库基本查看方式，查找操作。oracle数据库的下载与设置不做任何讲解，若防止设置错误、推荐视频：oracle安装与设置。">
@@ -196,12 +196,12 @@
 </blockquote>
 <p>首先要想操作数据库就得<font color="red">连接数据库</font>，输入命令：<code>sqlplus 用户名/密码</code>。</p>
 <font color="red">注</font>：数据库的用户有三种，超级管理员，普通管理员，普通用户。这里只使用普通用户。
-
-![](http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7JdZX6PjfMhmKCLox.8GWWiSyzg5ctm6Aj3paXpHs*QRMGd4qN8pqbX1hTaUbyw5E3IW5DQIBh.h0eyu4*nIF.w!/b&bo=QANSAUADUgEDGTw!&rf=viewer_4)
+![](http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7JdZX6PjfMhmKCLox.8GWWiSyzg5ctm6Aj3paXpHs*QRSFfZ65.EtwJwA668W618dq4tOOfIEGjBT9ZDs4GYtuc!/b&bo=QANSAUADUgEDGTw!&rf=viewer_4)
 
 当然，若想<font color="red">查找自己连接的用户名</font>，也可以输入：`show user`查看。
 
-![](http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7KcjRx03.IxzCbRbGmzBTYWrMXmqKtdgY58K5iWwjfPV4ucUA8WrYCX6Q6*qGynCj9.BINL.tV2uV9Lm1dtBmfE!/b&bo=2wJlANsCZQADGTw!&rf=viewer_4)
+![](http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7KcjRx03.IxzCbRbGmzBTYWrMXmqKtdgY58K5iWwjfPVDyoXygQm27XwSAh20ReOyHzth6N9KfrBjyMkxBWTuuM!/b&bo=2wJlANsCZQADGTw!&rf=viewer_4)
+
 
 > <font color="red">注意</font>：有些资料里面用<font color="blue">方案</font>代替了<font color="blue">用户</font>，<font color="blue">方案</font>也就相当于<font color="blue">用户</font>。
 
@@ -213,15 +213,23 @@ oracle数据库在下载好之后里面是已经存在一些已有的表格和�
 
 ![](http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7C4da6bQqWdrdBgNQZAVJDoKsnfh24c9n9AvjXiUZaiZkeD8bbu6qvhD*p6ShZam99T2CMowzNMhiiFLmBG0R8U!/b&bo=NwLAADcCwAADGTw!&rf=viewer_4)
 
+---
+
 输入：`select *from 表格名;`可以<font color="red">查看表格信息</font>。
 
 ![](http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7NIm8mJwuDJ2oz*ORIUe3xwRrvr1qdmYFBd0uV1WgmEi3NVZQclOppoJCBCW4C3qxm.8VZeQkSrRXFbM7eGnVUE!/b&bo=0gNIA9IDSAMDGTw!&rf=viewer_4)
 
 可以看到bonus表格没有任何信息，dopt表格与emp表格存在一些信息，但是emp表格感觉信息摆放的有些不合理。
 
-因为长度设置有限，使得表格信息部分重叠，可以输入命令：`set line 长度` <font color="red">设置自己想要的表格长度</font>。
+因为长度设置有限，使得表格信息部分重叠。
+
+---
+
+输入命令：`set line 长度` <font color="red">设置自己想要的表格长度</font>。
 
 ![](http://m.qpic.cn/psc?/V14Hh0W91HYkfZ/rQ1Ew1J6rKes9DolWmpX7G.B2LQKQHJDRKkTsRA0BXvczVQWK8kjBR78jiGoAUzZNAwKT2GkUcO7J4BN.sGMnR5eOfRdgWJD1.MDHWBS.Kg!/b&bo=MwToATME6AEDGTw!&rf=viewer_4)
+
+---
 
 同样输入：`desc 表名`可以<font color="red">查看表格字段</font>
 
@@ -230,16 +238,17 @@ oracle数据库在下载好之后里面是已经存在一些已有的表格和�
 <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><blockquote>
 <p> 当然啦，表格信息是摆法合理了但是看不懂也没有任何作用，以下就是<font color="red">表格信息的部分解释</font>：</p>
 </blockquote>
-<ol>
-<li><p><strong>实体</strong><br> 相当于java里面的<font color="blue">类</font>，用于指<font color="red">某类事物的集合</font>。</p>
-</li>
+<ul>
+<li><strong>实体</strong><br>   相当于java里面的<font color="blue">类</font>，用于指<font color="red">某类事物的集合</font>。</li>
+</ul>
+<ul>
 <li><p><strong>记录</strong><br> 相当于java里面的<font color="blue">对象</font>，也对应于表格里面的一<font color="red">行数据</font>。</p>
 </li>
 <li><p><strong>字段</strong><br> 相当于java里面的<font color="blue">属性</font>，也对应于表格里面的一<font color="red">列数据</font>。</p>
 </li>
 <li><p><strong>表</strong><br> 全部<strong>字段</strong> + 全部<strong>记录</strong>组合成的。</p>
 </li>
-</ol>
+</ul>
 <p>EMP(雇员表)：</p>
 <div class="table-container">
 <table>
@@ -468,11 +477,11 @@ oracle数据库在下载好之后里面是已经存在一些已有的表格和�
 </tr>
 <tr>
 <td>BLOB</td>
-<td>java.sql.Blob()</td>
+<td>java.sql.Blob</td>
 </tr>
 <tr>
 <td>CLOB</td>
-<td>java.sql.Clob()</td>
+<td>java.sql.Clob</td>
 </tr>
 </tbody>
 </table>
@@ -480,9 +489,9 @@ oracle数据库在下载好之后里面是已经存在一些已有的表格和�
 <p>通过查看表格字段可以看出每个数据的类型除了表明所属的属性外，有些后面还会带一些数字：</p>
 <ul>
 <li><p>NUMBER(几位整数,几位小数)：</p>
-<p>例如：NUMBER(4)：表示属性为<font color="blue">四位整数</font>的<font color="blue">整形数据</font>。</p>
-<pre><code>          NUMBER(4,2)：表示属性为&lt;font color=blue&gt;四位整数两位小数&lt;/font&gt;的&lt;font color=blue&gt;浮点类型&lt;/font&gt;。
-</code></pre></li>
+<p>例如：NUMBER(4)：表示属性为<font color="blue">四位整数</font>的<font color="blue">整形数据</font></p>
+<p>NUMBER(4,2)：表示属性为<font color="blue">四位整数两位小数</font>的<font color="blue">浮点类型</font>。</p>
+</li>
 <li><p>DATE属于<font color="red">日期类</font>，默认的格式为<font color="blue">日-月-年</font>。</p>
 </li>
 <li><p>BLOB属于<font color="red">二进制</font>类型，通常存放图片，电影等数据。</p>
@@ -787,11 +796,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">线代</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">线代</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">

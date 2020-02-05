@@ -6,16 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/7 | Dream博客</title>
+  <title>Oracle数据库学习(四) | Dream博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="css,html5,程序员">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Dream博客">
-<meta property="og:url" content="http://yoursite.com/archives/2019/07/index.html">
+  <meta name="description" content="oracle查询的一些语句与用法。">
+<meta name="keywords" content="Oracle学习笔记,笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Oracle数据库学习(四)">
+<meta property="og:url" content="http://yoursite.com/2020/02/05/Oracle数据库学习-四/index.html">
 <meta property="og:site_name" content="Dream博客">
+<meta property="og:description" content="oracle查询的一些语句与用法。">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://i.loli.net/2020/02/05/2eOUNh4oRPKsgzG.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/05/SLplxzQrVYdN1Tu.png">
+<meta property="og:updated_time" content="2020-02-05T07:39:55.294Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dream博客">
+<meta name="twitter:title" content="Oracle数据库学习(四)">
+<meta name="twitter:description" content="oracle查询的一些语句与用法。">
+<meta name="twitter:image" content="https://i.loli.net/2020/02/05/2eOUNh4oRPKsgzG.png">
   
     <link rel="alternative" href="/atom.xml" title="Dream博客" type="application/atom+xml">
   
@@ -155,251 +162,208 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Oracle数据库学习-四" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Oracle数据库学习(四)
+    </h1>
+  
+
+        
+        <a href="/2020/02/05/Oracle数据库学习-四/" class="archive-article-date">
+  	<time datetime="2020-02-05T05:52:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-05</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>oracle查询的一些语句与用法。<br><a id="more"></a></p>
+<hr>
+<h1 id="查询语句"><a href="#查询语句" class="headerlink" title="查询语句"></a>查询语句</h1><h2 id="范围查询"><a href="#范围查询" class="headerlink" title="范围查询"></a>范围查询</h2><p>用于查找一定范围内的数据，虽然利用运算符也可以达到范围查询的目的，但是直接利用范围查询可以减少工作量。<br>输入格式：关键字为<font color="red"><code>between ... and ...</code></font> ，前面接的是什么字段名就是对其字段进行范围查询。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#相当于：select *from where sal &gt;= 500 and sal &lt;= 1000;</span></span><br><span class="line">select *<span class="keyword">from</span> emp where sal between <span class="number">500</span> <span class="keyword">and</span> <span class="number">1000</span>;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="模糊查询"><a href="#模糊查询" class="headerlink" title="模糊查询"></a>模糊查询</h2><p>查询的目的就是为了在大量的数据中找到自己需求的数据，但是需求并不是都是明确且具体的，就如同要你去查找某个人的平均收入，你只要知道这个人名字，就可以以名字为依据去查找到信息，但是如果需求本来就是模糊的，就如让你去查找姓王的人平均收入，这种查找就只能用模糊查找的方法。<br>输入格式：主要用<font color="red"><code>like</code></font>作为关键字进行查询。前面接是哪个字段，就是对其字段数据进行模糊查询。而后面接的就是查找需求。<br>同时还得清楚一些一些通配符：</p>
+<ul>
+<li><font color="red"><code>_</code></font>：代表存在一个字符。</li>
+<li><font color="red"><code>%</code></font>：代表存在任意数量个字符。<br>例如：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#姓名里面第二个字母是M的员工信息</span></span><br><span class="line">select *<span class="keyword">from</span> emp where ename like <span class="string">'_M%'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">#名字长度大于6个的员工信息(一共有六个下划线)</span></span><br><span class="line">select *<span class="keyword">from</span> emp where ename like <span class="string">'______%'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">#名字中包含下划线的人员信息。</span></span><br><span class="line">select *<span class="keyword">from</span> emp where ename like <span class="string">'%\_%'</span> escape <span class="string">'\';</span></span><br><span class="line"><span class="string">#(escape '</span>\<span class="string">')：告诉程序遇到'</span>\<span class="string">'就把它当作转义符。</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h2 id="in查询"><a href="#in查询" class="headerlink" title="in查询"></a>in查询</h2><p>与范围查询类似，也可以用运算符来代替其用法，具体用法用以下例子说明。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查找在10号或20号或30号部门工作的员工信息</span></span><br><span class="line"><span class="number">1.</span>select *<span class="keyword">from</span> emp where deptno <span class="keyword">in</span>(<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>);</span><br><span class="line"><span class="number">2.</span>select *<span class="keyword">from</span> emp where deptno = <span class="number">10</span> <span class="keyword">or</span> deptno = <span class="number">20</span> <span class="keyword">or</span> deptno = <span class="number">30</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">#查询在10号，20号，30号部门之外的部门中工作的员工信息</span></span><br><span class="line"><span class="number">1.</span>select *<span class="keyword">from</span> emp where deptno <span class="keyword">not</span> <span class="keyword">in</span>(<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>);</span><br><span class="line"><span class="number">2.</span>select *<span class="keyword">from</span> emp where deptno !=<span class="number">10</span> <span class="keyword">and</span> deptno !=<span class="number">20</span> <span class="keyword">and</span> deptno !=<span class="number">30</span>;</span><br></pre></td></tr></table></figure></p>
+<p><font color="red">注意</font>：在not in中不要存在null，否则结果为空。</p>
+<blockquote>
+<p>select <em>from emp where deptno not in(10,20,null);<br>用运算符表示就相当于：<br>select </em>from emp where deptno != 10 and deptno != 20 and deptno != null;</p>
+<p><font color="red">而任何与null的计算，其结果总为null。</font><br>deptno != null的查询结果已经为空了，所以not in里面存在null查询结果为空。<br>但是in中不存在影响，因为in中各判断语句用or连接，于null的判断结果为空，但是不影响其他的判断。</p>
+</blockquote>
+<hr>
+<h1 id="去重"><a href="#去重" class="headerlink" title="去重"></a>去重</h1><p>关键字为<font color="red"><code>distinct</code></font>，后面接哪个字段，就是对其字段数据进行去重。<br>例如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#对员工的名字进行去重</span></span><br><span class="line">select distinct ename,job,sal,deptno <span class="keyword">from</span> emp;</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><p>对表格数据进行排序输出。<br>输入格式：关键字为<font color="red"><code>order by</code></font>，后面可以接字段名、表达式、序号。具体使用见例</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#对员工信息依据工资进行升序排列</span></span><br><span class="line"><span class="number">1.</span>select *<span class="keyword">from</span> emp order by sal;</span><br><span class="line"><span class="number">2.</span>select *<span class="keyword">from</span> emp order by sal asc;</span><br><span class="line"><span class="number">3.</span>select empno,ename,sal <span class="keyword">from</span> emp order by <span class="number">3</span>;</span><br><span class="line"><span class="number">4.</span>select *<span class="keyword">from</span> emp order by <span class="number">6</span> asc;</span><br><span class="line"></span><br><span class="line"><span class="comment">#对员工信息依据工资进行降序排列</span></span><br><span class="line"><span class="number">1.</span>select *<span class="keyword">from</span> emp order by sal desc;</span><br><span class="line"><span class="number">2.</span>select *<span class="keyword">from</span> emp order by <span class="number">3</span> desc;</span><br><span class="line"></span><br><span class="line"><span class="comment">#可以写，但是查询结果与不写一样，没必要。</span></span><br><span class="line"><span class="comment">#根据工资再加上一千进行排序。</span></span><br><span class="line">select *<span class="keyword">from</span> emp order by sal+<span class="number">100</span>;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>为什么<font color="red"><code>3</code></font>等同于<font color="red"><code>sal</code></font>，因为在查询数据中字段名从左往右数依次为：empno,ename,sal。sal在第三个所以可以用序号表示，同理<font color="red"><code>*</code></font>表示emp表格所有数据，sal在里面第六个，所以用序号<font color="red"><code>6</code></font>表示<font color="red"><code>sal</code></font>。</p>
+</blockquote>
+<p><font color="red">注意</font>：在排序过程中null为最大值。但是也可以将null扔到排序的在最后面。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select *<span class="keyword">from</span> emp order by sal desc nulls last;</span><br></pre></td></tr></table></figure></p>
+<p><font size="5"><strong>多列排序</strong></font> </p>
+<p><font color="red"><code>order by</code></font>后面可写多个字段名，读取顺序为从左往右。<br>例如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#先根据sal降序排序，在sal相同的情况下根据hirdest升序排序</span></span><br><span class="line">select *<span class="keyword">from</span> emp order by sal desc,hiredate asc;</span><br></pre></td></tr></table></figure>
+<h1 id="追加命令"><a href="#追加命令" class="headerlink" title="追加命令"></a>追加命令</h1><p>给上一个命令后面追加命令。<br>关键字为<font color="red"><code>a</code></font>，与<font color="red"><code>c</code></font>操作方式类似。<font color="red">a后面存在一个空格</font>。<br>例如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#给上一条命令追加对sal的排序。</span></span><br><span class="line">a  order by sal asc;</span><br><span class="line"><span class="comment">#a后面有两个空格</span></span><br></pre></td></tr></table></figure>
+<p><font color="red">注意</font>：<font color="red"><code>a</code></font>后面的命令会完整的复制到上一条语句的后面。<br>例如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#如果上一条语句为select *from emp;</span></span><br><span class="line">a order by sal asc;</span><br><span class="line"><span class="comment">#a后面只有一个空格</span></span><br></pre></td></tr></table></figure>
+<p>而最后的结果为：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select *<span class="keyword">from</span> emporder by sal asc;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>上一条语句emp后面没有<font color="red">空格</font>，而在追加语句时候是完全复制过去，你如果在语句前面不加上<font color="red">空格</font>，最后的结果就是两条语句没有用空格分开，产生错误。<br>正确的写法为：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#如果上一条语句为select *from emp;</span></span><br><span class="line">a  order by sal asc;</span><br><span class="line"><span class="comment">#a后面只有两个空格</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>只有一个空格：<br><img src="https://i.loli.net/2020/02/05/2eOUNh4oRPKsgzG.png" alt="1.png"></p>
+<hr>
+<p>有两个空格：<br><img src="https://i.loli.net/2020/02/05/SLplxzQrVYdN1Tu.png" alt="2.png"></p>
+<hr>
+<h1 id="参考材料"><a href="#参考材料" class="headerlink" title="参考材料"></a>参考材料</h1><ul>
+<li><a href="https://www.bilibili.com/video/av53956941?p=4" target="_blank" rel="noopener">查询和单行函数</a></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/13/hexo博客搭建/" class="archive-article-date">
-  	<time datetime="2019-07-13T04:53:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/13/hexo博客搭建/">hexo博客搭建</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Oracle学习笔记</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">博客搭建</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/05/Oracle数据库学习-四/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/11/线代学习笔记——12图与网络/" class="archive-article-date">
-  	<time datetime="2019-07-11T02:50:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/02/04/Oracle数据库学习-三/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Oracle数据库学习(三)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/11/线代学习笔记——12图与网络/">线代学习笔记——12图与网络</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">线代</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#查询语句"><span class="toc-number">1.</span> <span class="toc-text">查询语句</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#范围查询"><span class="toc-number">1.1.</span> <span class="toc-text">范围查询</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#模糊查询"><span class="toc-number">1.2.</span> <span class="toc-text">模糊查询</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#in查询"><span class="toc-number">1.3.</span> <span class="toc-text">in查询</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#去重"><span class="toc-number">2.</span> <span class="toc-text">去重</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#排序"><span class="toc-number">3.</span> <span class="toc-text">排序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#追加命令"><span class="toc-number">4.</span> <span class="toc-text">追加命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考材料"><span class="toc-number">5.</span> <span class="toc-text">参考材料</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/09/算法导论习题4-5/" class="archive-article-date">
-  	<time datetime="2019-07-09T11:06:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-09</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/09/算法导论习题4-5/">算法导论习题4-5</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法导论</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/08/hexo文章的创建/" class="archive-article-date">
-  	<time datetime="2019-07-08T01:28:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/08/hexo文章的创建/">hexo文章的创建</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">格式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/07/hello-world/" class="archive-article-date">
-  	<time datetime="2019-07-07T02:59:15.832Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/07/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/06/这只是一个测试/" class="archive-article-date">
-  	<time datetime="2019-07-06T10:29:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/06/这只是一个测试/">这只是一个测试</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -422,8 +386,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

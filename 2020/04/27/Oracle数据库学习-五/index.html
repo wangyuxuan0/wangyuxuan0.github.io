@@ -6,37 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>hexo博客搭建 | Dream博客</title>
+  <title>Oracle数据库学习-五 | Dream博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="感谢up主CodeSheep在B站发布的搭建hexo博客的视频，但是up主用的macOS系统，而我用的是windows系统，所以主要是想总结一下安装时候出现的一些问题。如果觉得有什么不懂的可以去B站https://space.bilibili.com/384068749/video去观看实际的情况。">
-<meta name="keywords" content="hexo,博客搭建">
+  <meta name="description" content="Oracle函数的使用。">
+<meta name="keywords" content="Oracle学习笔记,笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo博客搭建">
-<meta property="og:url" content="http://yoursite.com/2019/07/13/hexo博客搭建/index.html">
+<meta property="og:title" content="Oracle数据库学习-五">
+<meta property="og:url" content="http://yoursite.com/2020/04/27/Oracle数据库学习-五/index.html">
 <meta property="og:site_name" content="Dream博客">
-<meta property="og:description" content="感谢up主CodeSheep在B站发布的搭建hexo博客的视频，但是up主用的macOS系统，而我用的是windows系统，所以主要是想总结一下安装时候出现的一些问题。如果觉得有什么不懂的可以去B站https://space.bilibili.com/384068749/video去观看实际的情况。">
+<meta property="og:description" content="Oracle函数的使用。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/PBeFawG.SXlkoZbdVNAsppImUw3PYZiYa2AS3pGoA8k!/b/dFMBAAAAAAAA&bo=fQP4AQAAAAADF7U!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/XwoMjht2EuSNwPXMphJzQfN5QwrmIrvq6jxIK6WW218!/b/dL4AAAAAAAAA&bo=1QG*AAAAAAADF1k!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/ipGtA3cLv4XyzckCVs8.QTFH5fj0oqXQ85y4XNgXszw!/b/dLgAAAAAAAAA&bo=3wMbAgAAAAADJ8c!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/yU21hA.iaQQUMcGHUzDBqG5MJa6T2zYECYm*p4Mrkfg!/b/dIMAAAAAAAAA&bo=NQO5AAAAAAADF70!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/vVGzzEma8ggs1tI0hvhT2xUT9VjTth8WSlk5BRt8LN0!/b/dIMAAAAAAAAA&bo=FwNOAQAAAAADF2k!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/lq4P43cil1CDGSQd7X*eA0LhddyWABnkOHPFZzsO8I8!/b/dLgAAAAAAAAA&bo=.gJ5AAAAAAADF7M!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/05U2W01dXe2Lu8iS*O9loEoiddgagrhBrDoDU.yssGI!/b/dL4AAAAAAAAA&bo=3QKGAQAAAAADJ1o!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/bIoj9Um41R9Z2cfrIVDhnUC09M416SleRMV7p5GP8xw!/b/dDYBAAAAAAAA&bo=FgNjAAAAAAADF0Q!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/ebJMsqMvTyLSC9*Usp8hJManjD9SskV6iIXVjpHohS4!/b/dLYAAAAAAAAA&bo=ZgJzAAAAAAADFyU!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/SjcW*wBNZQ14ul63MweQaUN7MaTtSfTckM3tHAPX4t0!/b/dFMBAAAAAAAA&bo=yADKAQAAAAADFzE!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/UxoCQwaot5nuXXZiYuZONHQMKoDaXbkuOWRU6gNs.M4!/b/dLYAAAAAAAAA&bo=bAIEAQAAAAADF1k!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/aMndM0DitRCv4dZaN024g.iwisovW32qufY0u9LIePA!/b/dMUAAAAAAAAA&bo=ugPuAQAAAAADF2Q!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/IBVfaF*7zEht.wkpC3t6tPxFtrN5udw6U4XDvGgRTEo!/b/dL8AAAAAAAAA&bo=cAH4AAAAAAADF7s!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/4YAxndce4Vq.BEM534RU9Y8BbZTDrkZz5UFP2CYV7n8!/b/dLYAAAAAAAAA&bo=MASYAgAAAAADF5w!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/IFZunFoYLG*.NxKiseSdaoviWRPvZ.ETcrccvB1Fajw!/b/dAQBAAAAAAAA&bo=SANXAQAAAAADJx8!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/JmhYts5RcHgu4tAq6CpXr982W8Fvxc3AxFjcqVCPDjU!/b/dLgAAAAAAAAA&bo=SQO4AAAAAAADF8A!&rf=viewer_4">
-<meta property="og:updated_time" content="2019-07-14T11:16:00.272Z">
+<meta property="og:updated_time" content="2020-04-27T09:18:54.134Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo博客搭建">
-<meta name="twitter:description" content="感谢up主CodeSheep在B站发布的搭建hexo博客的视频，但是up主用的macOS系统，而我用的是windows系统，所以主要是想总结一下安装时候出现的一些问题。如果觉得有什么不懂的可以去B站https://space.bilibili.com/384068749/video去观看实际的情况。">
-<meta name="twitter:image" content="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/PBeFawG.SXlkoZbdVNAsppImUw3PYZiYa2AS3pGoA8k!/b/dFMBAAAAAAAA&bo=fQP4AQAAAAADF7U!&rf=viewer_4">
+<meta name="twitter:title" content="Oracle数据库学习-五">
+<meta name="twitter:description" content="Oracle函数的使用。">
   
     <link rel="alternative" href="/atom.xml" title="Dream博客" type="application/atom+xml">
   
@@ -176,137 +159,297 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hexo博客搭建" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Oracle数据库学习-五" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      hexo博客搭建
+      Oracle数据库学习-五
     </h1>
   
 
         
-        <a href="/2019/07/13/hexo博客搭建/" class="archive-article-date">
-  	<time datetime="2019-07-13T04:53:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-13</time>
+        <a href="/2020/04/27/Oracle数据库学习-五/" class="archive-article-date">
+  	<time datetime="2020-04-27T06:31:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>感谢up主<a href="www.codesheep.cn">CodeSheep</a>在B站发布的搭建hexo博客的视频，但是up主用的macOS系统，而我用的是windows系统，所以主要是想总结一下安装时候出现的一些问题。如果觉得有什么不懂的可以去B站<a href="https://space.bilibili.com/384068749/video" target="_blank" rel="noopener">https://space.bilibili.com/384068749/video</a>去观看实际的情况。</p>
-<a id="more"></a>
-<h1 id="hexo博客的搭建"><a href="#hexo博客的搭建" class="headerlink" title="hexo博客的搭建"></a>hexo博客的搭建</h1><hr>
-<h2 id="工具下载"><a href="#工具下载" class="headerlink" title="工具下载"></a>工具下载</h2><hr>
-<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>直接到nodejs的官网下载，到搜索栏里面输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nodejs.org</span><br></pre></td></tr></table></figure>
-<p>显示会进入node的官网</p>
-<p><img src="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/PBeFawG.SXlkoZbdVNAsppImUw3PYZiYa2AS3pGoA8k!/b/dFMBAAAAAAAA&amp;bo=fQP4AQAAAAADF7U!&amp;rf=viewer_4" alt="1562986868453"></p>
-<p>不同的系统会自动显示该系统的下载文件，因为我的是windows，所以显示的是window系统的安装文件。下载第一个LTS<font color="red">长期支持版</font>，之后就是安装，一直点击下一步就可以了。</p>
-<p>验证是否安装成功的方法：在cmd里面输入<code>node -v</code></p>
-<p>如果出现安装的版本号，就说明安装成功。比如这样的：</p>
-<p><img src="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/XwoMjht2EuSNwPXMphJzQfN5QwrmIrvq6jxIK6WW218!/b/dL4AAAAAAAAA&amp;bo=1QG*AAAAAAADF1k!&amp;rf=viewer_4" alt="1562987709159"></p>
+        <p>Oracle函数的使用。<br><a id="more"></a></p>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>函数通常被分为 <strong>单行函数</strong> 与 <strong>多行函数</strong> ，两者之间的区别为处理数据量的多少。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名字</th>
+<th style="text-align:center"><font color="orange">解释</font></th>
+<th style="text-align:center">类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">单行函数</td>
+<td style="text-align:center"><font color="orange">一次操作一行数据</font></td>
+<td style="text-align:center">字符函数、数值函数、日期函数、转换函数、通用函数。</td>
+</tr>
+<tr>
+<td style="text-align:center">多行函数</td>
+<td style="text-align:center"><font color="orange">一次操作多行数据</font></td>
+<td style="text-align:center">也被称作为组函数、聚合函数</td>
+</tr>
+</tbody>
+</table>
+</div>
 <hr>
-<h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p>和安装Node.js类似，到搜索栏里面输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://git-scm.com/downloads</span><br></pre></td></tr></table></figure>
-<p>然后进入官网：</p>
-<p><img src="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/ipGtA3cLv4XyzckCVs8.QTFH5fj0oqXQ85y4XNgXszw!/b/dLgAAAAAAAAA&amp;bo=3wMbAgAAAAADJ8c!&amp;rf=viewer_4" alt="1562987204577"></p>
-<p>这就根据系统去安装相应的程序，之后安装也是一直点击下一步。</p>
-<hr>
-<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><hr>
-<h3 id="安装cnpm"><a href="#安装cnpm" class="headerlink" title="安装cnpm"></a>安装cnpm</h3><p>因为安装hexo是需要Nodejs去支持的，所以下载Nodejs是必要的前置步骤，而安装git是为了方便之后命令的输入。</p>
-<p>之后就得安装cnpm，因为国内用npm下载速度很慢，所以先用npm去安装一个cnpm去减少下载速度的影响。</p>
-<p>先打开之前下载好的git，到桌面上面应该存在一个Git Bash，打开输入命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-<p>这样它就会自己帮我们安装cnpm，等待一会就可以了。</p>
-<p>验证是否安装成功的方法：在git里面输入<code>cnpm -v</code>出现相应的版本号就可以了。例如：</p>
-<p><img src="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/yU21hA.iaQQUMcGHUzDBqG5MJa6T2zYECYm*p4Mrkfg!/b/dIMAAAAAAAAA&amp;bo=NQO5AAAAAAADF70!&amp;rf=viewer_4" alt="1562988599806"></p>
-<hr>
-<h3 id="安装hexo框架"><a href="#安装hexo框架" class="headerlink" title="安装hexo框架"></a>安装hexo框架</h3><p>还是在刚才的git窗口里面输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<p>这样它就会自动帮我们下载好hexo的基本框架。</p>
-<p>可以在git里面用<code>hexo -v</code>来验证一下：</p>
-<p><img src="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/vVGzzEma8ggs1tI0hvhT2xUT9VjTth8WSlk5BRt8LN0!/b/dIMAAAAAAAAA&amp;bo=FwNOAQAAAAADF2k!&amp;rf=viewer_4" alt="1562988858623"></p>
-<hr>
-<h2 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h2><hr>
-<h3 id="使用hexo搭建博客"><a href="#使用hexo搭建博客" class="headerlink" title="使用hexo搭建博客"></a>使用hexo搭建博客</h3><blockquote>
-<p>首先在磁盘里面新建一个文件夹，用来保存你的博客文件，也就是说如果在搭建博客中出现了什么问题，完全可以直接删除那个文件夹，然后重新搭建。</p>
-<p>之后就利用git进入到新建的空文件里面，命令和cmd的一样，也是用 cd+空格+你的文件路径，这里我写的是<code>cd D:\Text1</code>，如果创建的不是这个路径，只要换一下路径就可以了，成功了会显示：</p>
-</blockquote>
-<p>同样你也可以输入<code>pwd</code>来查看路径是否进入：</p>
-<p><img src="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/lq4P43cil1CDGSQd7X*eA0LhddyWABnkOHPFZzsO8I8!/b/dLgAAAAAAAAA&amp;bo=.gJ5AAAAAAADF7M!&amp;rf=viewer_4" alt="1562989444869"></p>
-<p>之后就是使用hexo来生成博客了，直接输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-<p>等待一段时间就可以成功生成我们的博客了。</p>
-<p>安装完成之后可以去之前的文件夹里面去看，可以发现有很多文件，就是hexo帮你生成的博客的基础内容。</p>
-<p>这样博客可以说是完成了，输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<p>就是启动博客的意思，之后就可以到浏览器里面输入<code>localhost:4000</code>来访问博客。</p>
-<p><img src="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/05U2W01dXe2Lu8iS*O9loEoiddgagrhBrDoDU.yssGI!/b/dL4AAAAAAAAA&amp;bo=3QKGAQAAAAADJ1o!&amp;rf=viewer_4" alt="1562989964126"></p>
-<p>在git里面按ctrl+c是关闭hexo：</p>
-<p><img src="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/bIoj9Um41R9Z2cfrIVDhnUC09M416SleRMV7p5GP8xw!/b/dDYBAAAAAAAA&amp;bo=FgNjAAAAAAADF0Q!&amp;rf=viewer_4" alt="1562990767995"></p>
-<hr>
-<h1 id="hexo主题"><a href="#hexo主题" class="headerlink" title="hexo主题"></a>hexo主题</h1><hr>
-<h2 id="下载hexo主题"><a href="#下载hexo主题" class="headerlink" title="下载hexo主题"></a>下载hexo主题</h2><p>主题我用的就是up主推荐的yilia主题，当然想要别的也可以在github上面去查找。</p>
-<p>一样的，用git在之前的文件目录里面操作，输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
-<p>然后再进入你的文件夹里面找到<font color="red">_config.yml</font>文件，直接用笔记本模式打开就可以了，之后找到里面的<font color="blue">theme</font>，将其改为yilia，保存就可以了。</p>
+<h2 id="单行函数"><a href="#单行函数" class="headerlink" title="单行函数"></a>单行函数</h2><h3 id="字符函数"><a href="#字符函数" class="headerlink" title="字符函数"></a>字符函数</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">符号</th>
+<th style="text-align:center"><font color="orange">含义</font></th>
+<th style="text-align:center">示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">lower(str)</td>
+<td style="text-align:center"><font color="orange">变为小写</font></td>
+<td style="text-align:center">lower(‘Hello’)</td>
+</tr>
+<tr>
+<td style="text-align:center">upper(str)</td>
+<td style="text-align:center"><font color="orange">变为大写</font></td>
+<td style="text-align:center">upper(‘Hello’)</td>
+</tr>
+<tr>
+<td style="text-align:center">initcap(str)</td>
+<td style="text-align:center"><font color="orange">首字母变为大写</font></td>
+<td style="text-align:center">initcap(‘hELLO’)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select <span class="string">'HEllo wORd'</span> 一,lower(<span class="string">'HEllo wORd'</span>) 二,upper(<span class="string">'HEllo wORd'</span>) 三,initcap(<span class="string">'HEllo wORd'</span>) 四 <span class="keyword">from</span> dual;</span><br></pre></td></tr></table></figure>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">符号</th>
+<th style="text-align:center"><font color="orange">含义</font></th>
+<th style="text-align:center">示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">substr(str,begin,len)</td>
+<td style="text-align:center"><font color="orange">截取字符串</font></td>
+<td style="text-align:center">substr(‘hello world’, 1, 5)</td>
+</tr>
+<tr>
+<td style="text-align:center">length(str)</td>
+<td style="text-align:center"><font color="orange">str的字符数</font></td>
+<td style="text-align:center">length(‘hello world’)</td>
+</tr>
+<tr>
+<td style="text-align:center">lengthb(str)</td>
+<td style="text-align:center"><font color="orange">str的字节数</font></td>
+<td style="text-align:center">lengthb(‘hello world’)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><font color="red">注意：</font> substr里面截取字符串中，是从<font color="red">1</font>开始计数的，同时对于<font color="red">空格</font>不给予计数。</p>
 <blockquote>
-<p>注：记得前面分号前面加一个空格。</p>
+<p>length与lengthb对于不同的电脑会有一些差异，英文与数字就占用一个字符。<br>在<strong>utf-8</strong>编码格式下：一个<strong>汉字</strong>或者<strong>符号</strong>占用<strong>三个字节</strong><br>在<strong>gbk</strong>编码格式下：一个<strong>汉字</strong>或者<strong>符号</strong>占用<strong>二个字节</strong></p>
 </blockquote>
-<p><img src="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/ebJMsqMvTyLSC9*Usp8hJManjD9SskV6iIXVjpHohS4!/b/dLYAAAAAAAAA&amp;bo=ZgJzAAAAAAADFyU!&amp;rf=viewer_4" alt="1562990622037"></p>
-<p>之后再到git里面输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
-<p>清理</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-<p>生成</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<p>启动。</p>
-<p>然后再到浏览器里面进入localhost:4000，就可以发现博客主题已经改变了。</p>
-<p>至于如何耍yilia主题，网络上面已经有很多博主已经写的很完全了，就不献丑了，想了解的可以进入：<a href="https://blog.csdn.net/lynnbest/article/details/79845944" target="_blank" rel="noopener">https://blog.csdn.net/lynnbest/article/details/79845944</a></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">符号</th>
+<th style="text-align:center"><font color="orange">含义</font></th>
+<th style="text-align:center">示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">insrt(str1,str2)</td>
+<td style="text-align:center"><font color="orange">在str1里面找str2在第几个位置出现过</font></td>
+<td style="text-align:center">insrt(‘llo’,’hello’)</td>
+</tr>
+<tr>
+<td style="text-align:center">lpad(str,size,str1)</td>
+<td style="text-align:center"><font color="orange">将str扩展为size位，空余的位置用str1向左去填充</font></td>
+<td style="text-align:center">lpad(1,12,’he’)</td>
+</tr>
+<tr>
+<td style="text-align:center">rpad(str,size,str1)</td>
+<td style="text-align:center"><font color="orange">将str扩展位size位，空余的位置用str1向右去填充</font></td>
+<td style="text-align:center">rpad(1,12,’he’)</td>
+</tr>
+<tr>
+<td style="text-align:center">trim(str1 from str)</td>
+<td style="text-align:center"><font color="orange">将str里面的str1去掉，若不写str1 from则默认将str里面的空格去掉</font></td>
+<td style="text-align:center">trim(‘l’ from ‘hello’)</td>
+</tr>
+<tr>
+<td style="text-align:center">replace(str,str1,str2)</td>
+<td style="text-align:center"><font color="orange">将str里面的str1替换成str2</font></td>
+<td style="text-align:center">replace(‘hello world’,’l’,’q’)</td>
+</tr>
+</tbody>
+</table>
+</div>
 <hr>
-<h1 id="部署博客"><a href="#部署博客" class="headerlink" title="部署博客"></a>部署博客</h1><hr>
-<h2 id="配置git的用户信息："><a href="#配置git的用户信息：" class="headerlink" title="配置git的用户信息："></a>配置git的用户信息：</h2><p>到git里面输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config ---global user.name &quot;GitHub用户名&quot;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config ---global user.email &quot;GitHub邮箱&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="数值函数"><a href="#数值函数" class="headerlink" title="数值函数"></a>数值函数</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">符号</th>
+<th style="text-align:center"><font color="orange">含义</font></th>
+<th style="text-align:center">示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">round(number,size)</td>
+<td style="text-align:center"><font color="orange">将number四舍五入，保留size位小数</font></td>
+<td style="text-align:center">round(12.5789,2)</td>
+</tr>
+<tr>
+<td style="text-align:center">trunc(number,size)</td>
+<td style="text-align:center"><font color="orange">将number舍尾，保留size位小数</font></td>
+<td style="text-align:center">trunc(12.3456,3)</td>
+</tr>
+<tr>
+<td style="text-align:center">mod(number1,number2)</td>
+<td style="text-align:center"><font color="orange">number2对number1求余，number1%number2</font></td>
+<td style="text-align:center">mod(12,5)</td>
+</tr>
+</tbody>
+</table>
+</div>
 <hr>
-<h2 id="生成ssh密钥文件"><a href="#生成ssh密钥文件" class="headerlink" title="生成ssh密钥文件"></a>生成ssh密钥文件</h2><p>输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;GitHub邮箱&quot;</span><br></pre></td></tr></table></figure>
-<p>连续三次回车，默认设置空密码，创建key。</p>
-<p>默认生成在win10当前登录用户家目录的<strong>.ssh</strong>文件夹里面。</p>
+<h3 id="日期函数"><a href="#日期函数" class="headerlink" title="日期函数"></a>日期函数</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">符号</th>
+<th style="text-align:center"><font color="orange">含义</font></th>
+<th style="text-align:center">示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">sysdate</td>
+<td style="text-align:center"><font color="orange">为关键字，显示当前时间</font></td>
+<td style="text-align:center">select sysdate from dual;</td>
+</tr>
+<tr>
+<td style="text-align:center">to_char(date,format)</td>
+<td style="text-align:center"><font color="orange">将日期(date)按照格式(format)转换成字符串</font></td>
+<td style="text-align:center">to_char(sysdate, ‘yyyy-mm-dd’)</td>
+</tr>
+<tr>
+<td style="text-align:center">months_between(date1,date2)</td>
+<td style="text-align:center"><font color="orange">计算日期1与日期2相差多少月(date1-date2)</font></td>
+<td style="text-align:center">months_between(sysdate+10, sysdate)</td>
+</tr>
+<tr>
+<td style="text-align:center">add_months(date,month)</td>
+<td style="text-align:center"><font color="orange">给日期(date)加上月数(month)</font></td>
+<td style="text-align:center">add_months(sysdate,2)</td>
+</tr>
+<tr>
+<td style="text-align:center">last_day(date)</td>
+<td style="text-align:center"><font color="orange">当月最大多少天</font></td>
+<td style="text-align:center">last_day(sysdate)</td>
+</tr>
+<tr>
+<td style="text-align:center">next_day(date,week)</td>
+<td style="text-align:center"><font color="orange">date时间段下一个星期的星期几(week)是第几天</font></td>
+<td style="text-align:center">next_day(sysdate,2)</td>
+</tr>
+<tr>
+<td style="text-align:center">round、trunc</td>
+<td style="text-align:center"><font color="orange">对当前日期进行四舍五入或者舍尾</font></td>
+<td style="text-align:center">select round(sysdate,’month’),round(sysdate,’year’) from dual;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><font color="red">注意：</font>日期可以与数字相加减，默认加减都是天数，日期与日期之间只可以相减，用于计算两日期之差。</p>
 <hr>
-<h2 id="创建个人仓库"><a href="#创建个人仓库" class="headerlink" title="创建个人仓库"></a>创建个人仓库</h2><h3 id="设置信息"><a href="#设置信息" class="headerlink" title="设置信息"></a>设置信息</h3><p>将刚新生成的公钥id_rsa.pub打开，将里面的内容复制。复制方法：</p>
-<p>打开git输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
-<p>将显示的代码全部复制，别用快捷键复制，就直接右键复制。</p>
-<p>复制内容到github里新添加一个SSH Key：</p>
-<p>点击<strong>Settings</strong></p>
-<p><img src="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/SjcW*wBNZQ14ul63MweQaUN7MaTtSfTckM3tHAPX4t0!/b/dFMBAAAAAAAA&amp;bo=yADKAQAAAAADFzE!&amp;rf=viewer_4" alt="1562992436035"></p>
-<p>点击<strong>SSH and GPS keys</strong></p>
-<p><img src="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/UxoCQwaot5nuXXZiYuZONHQMKoDaXbkuOWRU6gNs.M4!/b/dLYAAAAAAAAA&amp;bo=bAIEAQAAAAADF1k!&amp;rf=viewer_4" alt="1562992549100"></p>
-<p>将之前的复制的代码粘贴进去就可以了。</p>
-<p><img src="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/aMndM0DitRCv4dZaN024g.iwisovW32qufY0u9LIePA!/b/dMUAAAAAAAAA&amp;bo=ugPuAQAAAAADF2Q!&amp;rf=viewer_4" alt="1562992726398"></p>
-<p>完了以后使用命令测试</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh git@github.com</span><br></pre></td></tr></table></figure>
-<p>前往github创建个人仓库，仓库名字必须为：<strong>username(你GitHub账户的名字).github.io</strong></p>
-<p><img src="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/IBVfaF*7zEht.wkpC3t6tPxFtrN5udw6U4XDvGgRTEo!/b/dL8AAAAAAAAA&amp;bo=cAH4AAAAAAADF7s!&amp;rf=viewer_4" alt="1562992823483"></p>
-<p><img src="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/4YAxndce4Vq.BEM534RU9Y8BbZTDrkZz5UFP2CYV7n8!/b/dLYAAAAAAAAA&amp;bo=MASYAgAAAAADF5w!&amp;rf=viewer_4" alt="1562993010390"></p>
-<p>将显示的地址复制。</p>
-<p><img src="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/IFZunFoYLG*.NxKiseSdaoviWRPvZ.ETcrccvB1Fajw!/b/dAQBAAAAAAAA&amp;bo=SANXAQAAAAADJx8!&amp;rf=viewer_4" alt="1562993517923"></p>
-<p>之后打开git进入安装文件夹的目录下，输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
-<p>里面显示的一些<font color="red">WARNING</font>可以不用管。</p>
-<p>然后一样打开<strong>_config.yml</strong>，到文件的最底部，在type后面加入git，并且在后面加上你GitHub仓库的地址，并且加上branch: master</p>
-<p><img src="http://m.qpic.cn/psb?/V12FMHeb3Bo7rr/JmhYts5RcHgu4tAq6CpXr982W8Fvxc3AxFjcqVCPDjU!/b/dLgAAAAAAAAA&amp;bo=SQO4AAAAAAADF8A!&amp;rf=viewer_4" alt="1562993359435"></p>
-<hr>
-<h3 id="部署博客到远端"><a href="#部署博客到远端" class="headerlink" title="部署博客到远端"></a>部署博客到远端</h3><p>输入代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>就成功把博客部署到远端了。之后就可以直接输入你之前的<strong>username(你GitHub账户的名字).github.io</strong>就可以直接访问。</p>
-<h1 id="引用文章"><a href="#引用文章" class="headerlink" title="引用文章"></a>引用文章</h1><ul>
-<li><a href="https://caiyantao.gitee.io/2019/04/13/Hexo-一/#comments" target="_blank" rel="noopener">Hexo学习(一)</a></li>
+<h3 id="通用函数"><a href="#通用函数" class="headerlink" title="通用函数"></a>通用函数</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">符号</th>
+<th style="text-align:center"><font color="orange">含义</font></th>
+<th style="text-align:center">示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">nvl(conditions,return)</td>
+<td style="text-align:center"><font color="orange">判断条件conditions是否为null，为null则放回return</font></td>
+<td style="text-align:center">select empno,ename,nvl(comm,0) from emp;</td>
+</tr>
+<tr>
+<td style="text-align:center">nvl2(conditions,return1,return2)</td>
+<td style="text-align:center"><font color="orange">判断条件conditions是否</font>不<font color="orange">为null，为null则返回return1，否则返回return2</font></td>
+<td style="text-align:center">select empno,ename,nvl(comm,comm+100,0) from emp;</td>
+</tr>
+<tr>
+<td style="text-align:center">nullif(a,b)</td>
+<td style="text-align:center"><font color="orange">a与b作比较，如果a等于b则放回null，否则返回a</font></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">coalesce(a,b,c,…..)</td>
+<td style="text-align:center"><font color="orange">获取第一个不为空的列的值</font></td>
+<td style="text-align:center">select coalesce(ename,job)from emp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>条件判断函数</strong></p>
+<ul>
+<li><p>decode(字段，条件1，返回值1，条件2，返回值2…….，最后表达式)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 为所有员工涨工资，不同职位增加不同工资</span></span><br><span class="line">select ename,job,sal 涨前,</span><br><span class="line">decode(job,<span class="string">'PRESIDENT'</span>,sal+<span class="number">1000</span>,<span class="string">'MANAGER'</span>,sal+<span class="number">500</span>,sal+<span class="number">300</span>) 涨后</span><br><span class="line"><span class="keyword">from</span> emp;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>case表达式 : 与java里面的which case类似</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">select ename,job,sal 涨前,</span><br><span class="line">case job</span><br><span class="line">when <span class="string">'PRESIDENT'</span> then sal+<span class="number">1000</span></span><br><span class="line">when <span class="string">'MANAGER'</span> then sal+<span class="number">500</span></span><br><span class="line"><span class="keyword">else</span> sal+<span class="number">300</span> end 涨后 <span class="keyword">from</span> emp;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
+<p><strong>转换函数</strong></p>
+<ul>
+<li><p>隐式转换(自动转换)<br>字符-&gt;数字<br>字符-&gt;日期<br>日期-&gt;字符<br>数字-&gt;字符</p>
+</li>
+<li><p>显示转换<br>字符-&gt;数字 : to_number(字符,格式)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select to_number(<span class="string">'￥123,456.7'</span>,<span class="string">'L999,999.9'</span>) <span class="keyword">from</span> dual;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>数字-&gt;字符 : to_char(数字,格式)<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select to_char(<span class="number">123456.7</span>,<span class="string">'L999,999.9'</span>) <span class="keyword">from</span> dual;</span><br></pre></td></tr></table></figure></p>
+<p>字符-&gt;日期 : to_date(字符,格式)<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select to_date(<span class="string">'2019-05-24'</span>,<span class="string">'yyyy-mm-dd'</span>)<span class="keyword">from</span> dual;</span><br></pre></td></tr></table></figure></p>
+<p>日期-&gt;字符 : to_char(日期,格式)<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select to_char(sysdate,<span class="string">'yyyy'</span>) <span class="keyword">from</span> dual;</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="多行函数"><a href="#多行函数" class="headerlink" title="多行函数"></a>多行函数</h2><ul>
+<li><p>count(字段)<br>  记录字段内不为null的存在数量，可以在字段前加上distinct进行去重。</p>
+</li>
+<li><p>max/min/avg/sum(字段)<br> 求字段内最大值/最小值/平均值/总和</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select count(*) 员工总数,</span><br><span class="line">sum(sal) 总工资,max(sal) 最大工资,</span><br><span class="line">min(sal) 最小工资,avg(sal) 平均工资 <span class="keyword">from</span> emp;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><font color="red">注意:</font>多行函数被称为组函数的原因，就是可以在分组时使用.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#根据部门编号分组，但是显然分组后可以查看平均工资，但是无法显示名字。</span></span><br><span class="line">select deptno,avg(sal) <span class="keyword">from</span> emp group by deptno;</span><br><span class="line"></span><br><span class="line"><span class="comment">#会报错</span></span><br><span class="line">select deptno,ename <span class="keyword">from</span> group by deptno;</span><br></pre></td></tr></table></figure>
+<p><font color="red">规律：</font>分组查询时，不在组函数（多行函数）中的列，必须在group by中。</p>
+<p>对分组后的数据进行筛选：having<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查找平均工资大于3000的部门</span></span><br><span class="line">select deptno,avg(sal) <span class="keyword">from</span> emp group by deptno having avg(sal)&gt;<span class="number">3000</span>;</span><br></pre></td></tr></table></figure></p>
+<p><font color="red">注意：</font>可以在having使用多行函数count、min、avg，但是不能在where中使用</p>
 
       
 
@@ -320,11 +463,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Oracle学习笔记</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">博客搭建</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
         		</li>
       		
 		</ul>
@@ -380,7 +523,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/13/hexo博客搭建/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/27/Oracle数据库学习-五/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -394,18 +537,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/01/15/Oracle数据库学习-一/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Oracle数据库学习(一)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/07/11/线代学习笔记——12图与网络/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">线代学习笔记——12图与网络</div>
+    <a href="/2020/02/05/Oracle数据库学习-四/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Oracle数据库学习(四)</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -432,7 +566,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo博客的搭建"><span class="toc-number">1.</span> <span class="toc-text">hexo博客的搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#工具下载"><span class="toc-number">1.1.</span> <span class="toc-text">工具下载</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Node-js"><span class="toc-number">1.1.1.</span> <span class="toc-text">安装Node.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Git"><span class="toc-number">1.1.2.</span> <span class="toc-text">安装Git</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装hexo"><span class="toc-number">1.2.</span> <span class="toc-text">安装hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装cnpm"><span class="toc-number">1.2.1.</span> <span class="toc-text">安装cnpm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装hexo框架"><span class="toc-number">1.2.2.</span> <span class="toc-text">安装hexo框架</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#搭建博客"><span class="toc-number">1.3.</span> <span class="toc-text">搭建博客</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用hexo搭建博客"><span class="toc-number">1.3.1.</span> <span class="toc-text">使用hexo搭建博客</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo主题"><span class="toc-number">2.</span> <span class="toc-text">hexo主题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#下载hexo主题"><span class="toc-number">2.1.</span> <span class="toc-text">下载hexo主题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#部署博客"><span class="toc-number">3.</span> <span class="toc-text">部署博客</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置git的用户信息："><span class="toc-number">3.1.</span> <span class="toc-text">配置git的用户信息：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生成ssh密钥文件"><span class="toc-number">3.2.</span> <span class="toc-text">生成ssh密钥文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建个人仓库"><span class="toc-number">3.3.</span> <span class="toc-text">创建个人仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#设置信息"><span class="toc-number">3.3.1.</span> <span class="toc-text">设置信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#部署博客到远端"><span class="toc-number">3.3.2.</span> <span class="toc-text">部署博客到远端</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#引用文章"><span class="toc-number">4.</span> <span class="toc-text">引用文章</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#函数"><span class="toc-number">1.</span> <span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#单行函数"><span class="toc-number">1.1.</span> <span class="toc-text">单行函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#字符函数"><span class="toc-number">1.1.1.</span> <span class="toc-text">字符函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数值函数"><span class="toc-number">1.1.2.</span> <span class="toc-text">数值函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#日期函数"><span class="toc-number">1.1.3.</span> <span class="toc-text">日期函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#通用函数"><span class="toc-number">1.1.4.</span> <span class="toc-text">通用函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多行函数"><span class="toc-number">1.2.</span> <span class="toc-text">多行函数</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>

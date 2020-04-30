@@ -6,16 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 学习笔记 | Dream博客</title>
+  <title>Oracle数据库学习-六 | Dream博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="css,html5,程序员">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Dream博客">
-<meta property="og:url" content="http://yoursite.com/tags/学习笔记/index.html">
+  <meta name="description" content="sql语句类型">
+<meta name="keywords" content="Oracle学习笔记,笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Oracle数据库学习-六">
+<meta property="og:url" content="http://yoursite.com/2020/04/30/Oracle数据库学习-六/index.html">
 <meta property="og:site_name" content="Dream博客">
+<meta property="og:description" content="sql语句类型">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://i.loli.net/2020/04/30/YbUHsveil5JR319.png">
+<meta property="og:updated_time" content="2020-04-30T08:48:00.547Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dream博客">
+<meta name="twitter:title" content="Oracle数据库学习-六">
+<meta name="twitter:description" content="sql语句类型">
+<meta name="twitter:image" content="https://i.loli.net/2020/04/30/YbUHsveil5JR319.png">
   
     <link rel="alternative" href="/atom.xml" title="Dream博客" type="application/atom+xml">
   
@@ -155,64 +161,299 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="w-Oracle数据库学习-六" class="article article-type-w " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/09/算法导论习题4-5/" class="archive-article-date">
-  	<time datetime="2019-07-09T11:06:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-09</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/09/算法导论习题4-5/">算法导论习题4-5</a>
+    <h1 class="article-title" itemprop="name">
+      Oracle数据库学习-六
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/04/30/Oracle数据库学习-六/" class="archive-article-date">
+  	<time datetime="2020-04-30T05:51:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>sql语句类型<br><a id="more"></a></p>
+<h1 id="SQL语句的类型"><a href="#SQL语句的类型" class="headerlink" title="SQL语句的类型"></a>SQL语句的类型</h1><p>SQL语句的类型分为三类：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">DML</th>
+<th style="text-align:center"><font color="orange">数据库操作语言</font></th>
+<th style="text-align:center">insert、delete、update、select</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">DDL</td>
+<td style="text-align:center"><font color="orange">数据库定义语言</font></td>
+<td style="text-align:center">creat、drop、truncate、alter</td>
+</tr>
+<tr>
+<td style="text-align:center">DCL</td>
+<td style="text-align:center"><font color="orange">数据库控制语言</font></td>
+<td style="text-align:center">grant、revoke</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="DML"><a href="#DML" class="headerlink" title="DML"></a>DML</h2><p>数据库操作语言，主要用于对数据的增删改查操作。</p>
+<h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><ul>
+<li>插入完整数据<ol>
+<li>insert into 表名（字段名1，字段名2,…..,）value (字段值1，字段值2,…)</li>
+<li>insert into 表名 value (字段值1，字段值2,…)</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">insert into emp(EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO) values(<span class="number">3322</span>,<span class="string">'lisi'</span>,<span class="string">'MANAGER'</span>,<span class="number">7788</span>,<span class="string">'19-9月 -88'</span>,<span class="number">9998</span>,<span class="number">1000</span>,<span class="number">10</span>);</span><br><span class="line"></span><br><span class="line">insert into emp values(<span class="number">3322</span>,<span class="string">'lisi'</span>,<span class="string">'MANAGER'</span>,<span class="number">7788</span>,<span class="string">'19-9月 -88'</span>,<span class="number">9998</span>,<span class="number">1000</span>,<span class="number">10</span>);</span><br></pre></td></tr></table></figure>
+<p><font color="red">注意：</font><br>1.字段名的类型、个数、顺序都得与字段值保持一致。<br>2.省略字段名后，values插入的数据必须是完整的字段，并且顺序和默认顺序一致<br>3.只有SQL99标准允许省略，而SQL92标准是不允许省略</p>
+<hr>
+<ul>
+<li>插入不完整数据</li>
+</ul>
+<blockquote>
+<p>如果插入的数据不完整，可以写上不完整的字段名</p>
+</blockquote>
+<p>insert into 表名（字段名1，字段名2,…..,）value (字段值1，字段值2,…)<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into emp(EMPNO,ENAME,JOB)  values(<span class="number">4442</span>,<span class="string">'wangwu'</span>,<span class="string">'MANAGER'</span>);</span><br></pre></td></tr></table></figure></p>
+<hr>
+<ul>
+<li>动态插入数据</li>
+</ul>
+<blockquote>
+<p>关键值为<strong>&amp;</strong>，表示为设置成变量，等待人员输入数据</p>
+</blockquote>
+<p>insert into 表名（字段名1，字段名2,…..,）value (<strong>&amp;</strong>字段值1，<strong>&amp;</strong>字段值2,…)<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">insert into emp(EMPNO,ENAME,JOB) values(&amp;empno,&amp;ename,&amp;job);</span><br><span class="line"></span><br><span class="line">insert into emp(EMPNO,ENAME,&amp;otherName) values(<span class="number">1245</span>,<span class="string">'zaoliu'</span>,&amp;otherValue);</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://i.loli.net/2020/04/30/YbUHsveil5JR319.png" alt="1.png"></p>
+<p><font color="red">注意：</font><br>1.如果是字符、日期，动态输入时候还是需要加<strong>单引</strong><br>2.表名也可以加上&amp;进行动态输入</p>
+<hr>
+<ul>
+<li>批量插入数据</li>
+</ul>
+<p>1.插入数据前不存在此表格</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 把emp表里面的数据复制到mytab表（此表不存在）</span></span><br><span class="line">create table mytab</span><br><span class="line"><span class="keyword">as</span></span><br><span class="line">select *<span class="keyword">from</span> emp;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 只复制一部分数据</span></span><br><span class="line">create table mytab2</span><br><span class="line"><span class="keyword">as</span></span><br><span class="line">select empno,ename,job <span class="keyword">from</span> emp</span><br><span class="line">where sal&lt;<span class="number">6000</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 快速创建表结构（只要结构，不要数据）</span></span><br><span class="line">create table mytab4</span><br><span class="line"><span class="keyword">as</span></span><br><span class="line">select *<span class="keyword">from</span> emp where <span class="number">1</span>=<span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+<p>2.插入数据前已存在此表格</p>
+<p>格式：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">begin</span><br><span class="line">	insert...</span><br><span class="line">	insert....</span><br><span class="line">	...</span><br><span class="line">end	+(回车)+（/）</span><br></pre></td></tr></table></figure></p>
+<p>例如：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">begin</span><br><span class="line">	insert into emp values(<span class="number">6622</span>,<span class="string">'LiSi'</span>,<span class="string">'MANAGER'</span>,<span class="number">7788</span>,<span class="string">'19-9月 -88'</span>,<span class="number">9998</span>,<span class="number">1000</span>,<span class="number">10</span>);</span><br><span class="line">	insert into emp values(<span class="number">6662</span>,<span class="string">'lurenjia'</span>,<span class="string">'MANAGER'</span>,<span class="number">7788</span>,<span class="string">'19-9月 -88'</span>,<span class="number">9998</span>,<span class="number">1000</span>,<span class="number">10</span>);</span><br><span class="line">	insert into emp values(<span class="number">3882</span>,<span class="string">'wkse'</span>,<span class="string">'MANAGER'</span>,<span class="number">7788</span>,<span class="string">'19-9月 -88'</span>,<span class="number">9998</span>,<span class="number">1000</span>,<span class="number">10</span>);</span><br><span class="line">end;</span><br></pre></td></tr></table></figure></p>
+<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><ul>
+<li>删除表内所有数据</li>
+</ul>
+<p>delete from 表名；</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete <span class="keyword">from</span> emp;</span><br></pre></td></tr></table></figure>
+<p><font color="red">注意：</font><br>1.因为用的是DML语句，为事务操作，在没有被提交之前可以被回退，输入rollback可以撤销之前操作。<br>2.<code>truncate table 表名;</code>也可以进行全表数据删除，但是为DDL操作，不可以被回退。 </p>
+<hr>
+<ul>
+<li>选择性删除</li>
+</ul>
+<p>delete from 表名 where …..;<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">delete <span class="keyword">from</span> emp where empno=<span class="number">1234</span>;</span><br><span class="line"></span><br><span class="line">delete <span class="keyword">from</span> course where name =<span class="number">3</span>;</span><br></pre></td></tr></table></figure></p>
+<p><font color="red">注意：</font><br>1.通常得加where选择性删除。<br>2.delete from 表名，中间没有<strong>星号</strong>。</p>
+<hr>
+<ul>
+<li>测试delete与truncate的区别</li>
+</ul>
+<p>显示代码执行时间：<code>set timing on</code><br>关闭显示代码执行时间：<code>set timing off</code></p>
+<p><font color="red">区别：</font><br>    1.对于少量数据：delete效率高（操作为：一行一行删除）<br>    2.对于海量数据：truncate效率高（操作为两步：a.drop table 丢弃整张表, b.重新创建表）<br>    3.deletd支持闪回，truncate不支持闪回<br>    4.delete不会释放空间（只是将数据换了个数据存储[undo空间]），truncate会释放空间<br>    5.deletd会产生碎片，truncate不会</p>
+<blockquote>
+<p>碎片产生原因：<br>数据存放就如同<strong>堆</strong>一样（存放数据的方式也一样），指针会从低位向高位移动，指向空缺区域<br>存放的数据地址为指针指向的地址，<br>当数据删除的时候，被删除数据的地址就空缺了出来，高位数据与地位数据之间有空缺位，这就是碎片。</p>
+<p>整理碎片的方法：<br>将有碎片的表格数据全部导出到新的表格里面，数据存入表格里面不会产生碎片，于是只要将新表的数据全部重新导入到表格里面去就清理了碎片。<br>或者输入：<code>alter table 表名 move;</code>清理表格碎片</p>
+</blockquote>
+<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><p>update 表名 set 字段名1=字段名1，字段名2=字段名2，字段名3=字段名3……where…</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">update selcourse set num = <span class="number">3</span> where id = <span class="number">1</span>;</span><br><span class="line">update student set id = <span class="number">102003</span>, empno = <span class="string">'外语系'</span> where name=<span class="string">'王平'</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="DDL"><a href="#DDL" class="headerlink" title="DDL"></a>DDL</h2><h3 id="创建表格"><a href="#创建表格" class="headerlink" title="创建表格"></a>创建表格</h3><p>create table 表名(字段名1 类型1，字段名2 类型2……);<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">create table mytab6</span><br><span class="line">(</span><br><span class="line">	id number，</span><br><span class="line">	name varchar(<span class="number">10</span>)，</span><br><span class="line">	age number</span><br><span class="line">);</span><br></pre></td></tr></table></figure></p>
+<p><font color="red">注意</font></p>
+<pre><code>1. 空间和权限问题。
+如果是新用户创建可能没有权限
+2. 表名规定:
+    a.必须以字母开头
+    b.表名只能包含：大小写字母、数字、下划线、$、#
+    c.长度1-30个字符
+    d.不能与数据库中其他对象重名（表、视图、索引、触发器、存储过程....）
+    e.不能与关键字重名。
+        查看关键字：得进入超级管理员账户
+        方法：sqlplus / as sysdba
+        查看保留字：
+            select *from v$reserved_words order by keyword asc;
+        设置某个字段的宽度：
+        字符
+            设置能展示10个字符
+            col KEYWORD for a10
+        数字
+            设置能展示4为数字
+            col LENGTH for 9999
+</code></pre><h3 id="修改表"><a href="#修改表" class="headerlink" title="修改表"></a>修改表</h3><p>1.追加新列</p>
+<p>alter table 表名 add 字段名 类型；</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table mytab4 add myother varchar2(<span class="number">10</span>);</span><br></pre></td></tr></table></figure>
+<p>2.修改列</p>
+<p>alter table 表名 modify 字段名 类型；<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table mytab4 modify myother varchar2(<span class="number">20</span>);</span><br></pre></td></tr></table></figure></p>
+<p><fot color="red">注意：&lt;/font&gt;lob、clob类型的列不能修改，只能先删除此列，重新追加。</fot></p>
+<p>3.删除列</p>
+<p>alter table 表名 drop column 字段名；<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table mytab6 drop column myother2;</span><br></pre></td></tr></table></figure></p>
+<p>4.重命名列</p>
+<p>alter table 表名 rename column 字段名 to 新字段名；</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table emp rename column ename to enames;</span><br></pre></td></tr></table></figure>
+<h3 id="删除表"><a href="#删除表" class="headerlink" title="删除表"></a>删除表</h3><p>drop table 表名；<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop table student;</span><br></pre></td></tr></table></figure></p>
+<p><font color="red">注意</font>：<br>1.表格没有被删除，只是被放入回收站里面去了。<br>2.使用<code>select *from tab;</code>可以找到表，但是名字已经被乱码了。</p>
+<ul>
+<li>查看回收站</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show recyclebin；</span><br></pre></td></tr></table></figure>
+<ul>
+<li>清空回收站</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">purge recyclebin；</span><br></pre></td></tr></table></figure>
+<ul>
+<li>还原回收站</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rollback</span><br></pre></td></tr></table></figure>
+<ul>
+<li>彻底删除表格的方法</li>
+</ul>
+<p>drop table 表名 purge;<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop table test02 purge;</span><br></pre></td></tr></table></figure></p>
+<p>一步删除，不会进入回收站</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法导论</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Oracle学习笔记</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/30/Oracle数据库学习-六/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/04/27/Oracle数据库学习-五/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Oracle数据库学习-五</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#SQL语句的类型"><span class="toc-number">1.</span> <span class="toc-text">SQL语句的类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#DML"><span class="toc-number">1.1.</span> <span class="toc-text">DML</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#插入"><span class="toc-number">1.1.1.</span> <span class="toc-text">插入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除"><span class="toc-number">1.1.2.</span> <span class="toc-text">删除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改"><span class="toc-number">1.1.3.</span> <span class="toc-text">修改</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DDL"><span class="toc-number">1.2.</span> <span class="toc-text">DDL</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建表格"><span class="toc-number">1.2.1.</span> <span class="toc-text">创建表格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改表"><span class="toc-number">1.2.2.</span> <span class="toc-text">修改表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除表"><span class="toc-number">1.2.3.</span> <span class="toc-text">删除表</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -235,9 +476,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
